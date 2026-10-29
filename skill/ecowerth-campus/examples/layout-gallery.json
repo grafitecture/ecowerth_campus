@@ -1,0 +1,314 @@
+{
+  "presentation": {
+    "title": "Zukunft im Kreislauf",
+    "subtitle": "Kreislaufwirtschaft aus einer Hand. Ganzheitlich. Rechtskonform. Nachhaltig.",
+    "kicker": "ECOWERTH · Unternehmenspräsentation",
+    "presenter": {"name": "Florian Werthmann", "role": "Geschäftsführer, ecowerth GmbH"},
+    "date": "Oktober 2026 · Reichenberg",
+    "chapters": ["Die Gruppe", "Unsere Marken", "Leistungen", "Rechtsrahmen", "Zusammenarbeit"]
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "Layout 01 · cover",
+      "notes": "01 Titel (cover). Kicker, Titel, Untertitel, Name und Funktion, Datum und Ort. Rechts der Kreislauf der Website mit den drei Marken im Kern."
+    },
+    {
+      "type": "agenda",
+      "kicker": "Layout 02 · agenda",
+      "title": "Inhalt",
+      "items": [
+        {"title": "Die Gruppe", "text": "Vier Unternehmen. Ein Kreislauf."},
+        {"title": "Unsere Marken", "text": "Ein Dach, drei Marken."},
+        {"title": "Leistungen", "text": "Acht Leistungsfelder entlang der Pflichtenkette."},
+        {"title": "Rechtsrahmen", "text": "Ihre Pflichten. Unsere Systematik."},
+        {"title": "Zusammenarbeit", "text": "Ein Gespräch, in dem Ihre Pflichten sortiert werden."}
+      ],
+      "notes": "02 Agenda (agenda). Ohne 'items' stehen hier die Kapitel der Präsentation."
+    },
+    {
+      "type": "chapter",
+      "chapter": 2,
+      "kicker": "Layout 03 · chapter",
+      "line": "Ein Dach, drei Marken.",
+      "notes": "03 Kapitel (chapter). Der Ring zeigt die Kapitel als Kreislauf: das aktuelle in Grün, erledigte hell."
+    },
+    {
+      "type": "hook",
+      "kicker": "Layout 04 · hook",
+      "quote": "Sie wissen nicht, welche Pflichten Sie treffen?",
+      "truth": {"text": "Ob KrWG, ElektroG oder EU-VO 2024/1157: Welche Pflicht gilt, hängt an Ihrer Rolle im Materialkreislauf."},
+      "answer": {"text": "Wir ordnen zu, welche Pflicht für Ihre Rolle gilt – und setzen sie um. Beratung, Systembetrieb und Fläche aus einer Hand."},
+      "notes": "04 Einstieg (hook). Frage oder Zitat, Ausgangslage, Antwort von ECOWERTH."
+    },
+    {
+      "type": "points",
+      "chapter": 3,
+      "kicker": "Layout 05 · points",
+      "title": "Compliance, die im Betrieb funktioniert",
+      "points": [
+        {"lead": "Beauftragtenwesen", "text": "Externe Abfall-, Immissionsschutz- und Gefahrgutbeauftragte."},
+        {"lead": "Product Compliance", "text": "Recyclingfähigkeit, Kennzeichnung sowie CE-, REACH- und SCIP-Konformität."},
+        {"lead": "Erweiterte Herstellerverantwortung", "text": "Registrierung, Mengenmeldung, Systembeteiligung, eigene Rücknahme."},
+        {"lead": "Reporting & Managed Services", "text": "ESG- und CSRD-Kennzahlen, Mengenstromvalidierung, Interimsmanagement."}
+      ],
+      "legal": ["§ 59 KrWG", "§ 23 KrWG", "ElektroG § 6", "BImSchG"],
+      "notes": "05 Punkte (points). Zwei bis vier Punkte mit Kurztitel und Erklärung, die Standardfolie. Rechtsgrundlagen als Paragrafen-Chips."
+    },
+    {
+      "type": "points_photo",
+      "chapter": 3,
+      "kicker": "Layout 06 · points_photo",
+      "title": "Ihre externe Umweltabteilung",
+      "points": [
+        {"lead": "Pflichtenanalyse", "text": "Welche Regelwerke für Ihre Rolle gelten – und was daraus folgt."},
+        {"lead": "Umsetzung", "text": "Beauftragtenwesen, Dokumentation und Behördenkommunikation."},
+        {"lead": "Arbeitsweise", "text": "Als Mandat, Projekt oder Interim – national wie international."}
+      ],
+      "photo": {"file": "photos/sammelbehaelter-tablet.jpg"},
+      "caption": "Getrennthaltung und Dokumentation im Betrieb",
+      "notes": "06 Punkte + Foto (points_photo)."
+    },
+    {
+      "type": "points_chart",
+      "chapter": 2,
+      "kicker": "Layout 07 · points_chart",
+      "title": "ECO Park Röthlein",
+      "points": [
+        {"lead": "Lage", "text": "Industriegebiet Röthlein, direkt an der A70 bei Schweinfurt."},
+        {"lead": "Infrastruktur", "text": "Eigene Lkw-Waage, Trafostation und installierte Brandmeldeanlage."},
+        {"lead": "Perspektive", "text": "Hallenerweiterung bis 1.000 m², PV-Potenzial auf den Dachflächen."}
+      ],
+      "chart": {
+        "title": "Flächen am Standort",
+        "bars": [
+          {"label": "Grundstück", "value": 100, "display": "8.000 m²", "highlight": true},
+          {"label": "Lager- und Produktionsfläche", "value": 22.5, "display": "1.800 m²"},
+          {"label": "Kalthalle", "value": 5, "display": "400 m²"},
+          {"label": "Büroflächen, klimatisiert", "value": 2.5, "display": "200 m²"}
+        ],
+        "note": "Alle Angaben ca.; der Standort ist derzeit vollständig vermietet."
+      },
+      "notes": "07 Punkte + Grafik (points_chart). Balken mit Wert 0–100 und eigener Anzeige."
+    },
+    {
+      "type": "statement",
+      "kicker": "Layout 08 · statement",
+      "big": "4",
+      "statement": "Unternehmen gehen in der ecowerth GmbH auf",
+      "text": "Ecologicon GmbH · ECO ReLoop GmbH · Eco Park Röthlein GmbH · Maintal Recycling UG",
+      "notes": "08 Aussage (statement). Eine große Zahl oder ein Merksatz mit kurzer Erklärung."
+    },
+    {
+      "type": "facts",
+      "kicker": "Layout 09 · facts",
+      "title": "ECOWERTH in Zahlen",
+      "lead": "Was bisher auf vier Firmierungen verteilt war, arbeitet künftig unter einem Dach.",
+      "facts": [
+        {"value": "4", "label": "Unternehmen unter einem Dach"},
+        {"value": "3", "label": "Marken: ECOLOGICON · ECORELOOP · ECOINVEST"},
+        {"value": "12", "label": "abgedeckte Zielgruppen entlang der Pflichtenkette"},
+        {"value": "8.000 m²", "label": "eigener Standort ECO Park Röthlein"}
+      ],
+      "notes": "09 Kennzahlen (facts). Zwei bis vier Kennzahlen auf dem grünen Band, wie auf der Website."
+    },
+    {
+      "type": "brands",
+      "kicker": "Layout 10 · brands",
+      "title": "Ein Dach, drei Marken",
+      "columns": [
+        {"brand": "ecologicon", "label": "Beratung", "from": "bisher: Ecologicon GmbH",
+         "text": "Die externe Umweltabteilung für Hersteller, Importeure und Entsorger.",
+         "items": ["Beauftragtenwesen & Betreiberpflichten", "EPR & Herstellerverantwortung", "Abfallverbringung & Cross-Border", "ESG-, CSRD- & Mengenstromreporting"]},
+        {"brand": "ecoreloop", "label": "Systembetrieb", "from": "bisher: ECO ReLoop GmbH",
+         "text": "Der operative Arm für Elektroaltgeräte, Batterien und Textilien.",
+         "items": ["Rücknahme- & Sammelsysteme", "Zwischenlagerung Batterien & Abfälle", "Notifizierungsverfahren", "Green Box & Electro-Box"]},
+        {"brand": "ecoinvest", "label": "Flächen & Anlagen", "from": "bisher: Eco Park Röthlein GmbH & Maintal Recycling UG",
+         "text": "Genehmigungsfähige Flächen und Betreiberkonzepte für die Kreislaufwirtschaft.",
+         "items": ["Gewerbeimmobilien Kreislaufwirtschaft", "ECO Park Röthlein · 8.000 m²", "Genehmigungs- & Betreiberkonzepte", "Operative Recyclingkapazität"]}
+      ],
+      "notes": "10 Marken (brands). Zwei oder drei Spalten; 'brand' setzt Wortmarke und Farbe der Untermarke."
+    },
+    {
+      "type": "checklist",
+      "chapter": 3,
+      "kicker": "Layout 11 · checklist",
+      "title": "Portfolio 2026: acht Leistungsfelder",
+      "items": [
+        "Beauftragtenwesen, Betreiberpflichten & Verpflichtungsumsetzung",
+        "Abfallverbringung, BASEL & internationale Entsorgungsprozesse",
+        "Erweiterte Herstellerverantwortung (EPR) & Rücknahmesysteme",
+        "Systemarchitektur, Umsetzung & Kreislaufwirtschaftskonzepte",
+        "Standort: Managementsysteme, Genehmigungswesen & Zertifizierung",
+        "Beratung zu Technologien & Prozessen",
+        "Reporting & Wirtschaftlichkeit",
+        "Operative Umsetzung, Projekte & internationale Konzernservices"
+      ],
+      "notes": "11 Checkliste (checklist). Bis zu acht nummerierte Punkte, ab sechs in zwei Spalten, optional mit Fokus-Box."
+    },
+    {
+      "type": "steps",
+      "chapter": 3,
+      "kicker": "Layout 12 · steps",
+      "title": "Vom Konzept bis zum Tagesbetrieb",
+      "steps": [
+        {"title": "Pflichten analysieren", "text": "Welche Regelwerke gelten für Ihre Produkte und Abfälle?"},
+        {"title": "System aufbauen", "text": "Rücknahme- und Sammelsysteme, abgestimmt auf Ihre Stoffströme."},
+        {"title": "Sammeln und lagern", "text": "Logistik und Zwischenlagerung nach höchsten Sicherheitsstandards."},
+        {"title": "Verwerten und nachweisen", "text": "Verwertung mit vollständiger Nachweisführung."}
+      ],
+      "notes": "12 Schritte (steps). Drei bis fünf Schritte mit Titel und Text."
+    },
+    {
+      "type": "steps",
+      "chapter": 2,
+      "kicker": "Layout 12 · steps mit Fotos",
+      "title": "Standort in Bildern",
+      "caption": "Echte Standortfotos folgen – bis dahin Platzhalter mit Bildbriefing.",
+      "steps": [
+        {"title": "Luftbild Standort", "photo": {"brief": "Foto: Luftbild ECO Park Röthlein"}},
+        {"title": "Halle innen", "photo": {"brief": "Foto: Lager- und Produktionsfläche"}},
+        {"title": "Anlieferung", "photo": {"brief": "Foto: Lkw-Waage und Anlieferung"}}
+      ],
+      "notes": "12 Schritte mit Fotos (steps). Zwei bis vier Fotos in einer Reihe; fehlt ein Foto, steht ein Platzhalter mit Briefing."
+    },
+    {
+      "type": "compare",
+      "chapter": 1,
+      "kicker": "Layout 13 · compare",
+      "title": "Was sich ändert – und was nicht",
+      "style": "neutral",
+      "left": {"label": "Was sich ändert", "items": ["Eine Firmierung: die ecowerth GmbH", "Drei klar geschnittene Marken", "Ein Vertragspartner für Beratung, Systembetrieb und Fläche"]},
+      "right": {"label": "Was bleibt", "items": ["Teams und Projektverantwortliche", "Laufende Mandate, Systemverträge und Mietverhältnisse", "Standorte Reichenberg, Röthlein und Singapur"]},
+      "notes": "13 Vergleich (compare). Stile: do_dont (links richtig), myth_fact (rechts richtig), neutral (beide Seiten gleichwertig)."
+    },
+    {
+      "type": "matrix",
+      "chapter": 4,
+      "kicker": "Layout 14 · matrix",
+      "title": "Welche Pflicht trifft welche Rolle?",
+      "corner": "Akteur",
+      "columns": ["KrWG", "ElektroG", "BattG", "GewAbfV", "NachwV", "AbfAEV"],
+      "rows": [
+        {"label": "Transporteur von Abfällen", "cells": [true, false, false, false, true, true]},
+        {"label": "Entsorgungsunternehmen / Entsorger", "cells": [true, true, true, true, true, true]},
+        {"label": "Hersteller von Elektrogeräten", "cells": [true, true, false, false, false, false]},
+        {"label": "Vertreiber von Elektrogeräten", "cells": [true, true, false, false, false, false]},
+        {"label": "Batteriehersteller / -importeure", "cells": [true, false, true, false, false, false]},
+        {"label": "Vertreiber von Batterien", "cells": [true, false, true, false, false, false]},
+        {"label": "Rücknahmesysteme", "cells": [true, true, true, false, false, false]},
+        {"label": "Gewerbliche Abfallerzeuger", "cells": [true, false, false, true, true, true]},
+        {"label": "Händler / Makler von Abfällen", "cells": [true, false, false, false, true, true]},
+        {"label": "Importeure", "cells": [true, true, true, false, false, false]}
+      ],
+      "note": "Quelle: interne Zielgruppen-/Pflichtenmatrix ECO, Stand 2025. ElektroG und BattG gelten für Importeure, soweit Elektrogeräte bzw. Batterien betroffen sind.",
+      "notes": "14 Tabelle (matrix). Bis zu zehn Zeilen und sieben Spalten; Zellen true (Haken), false (Strich) oder kurzer Text."
+    },
+    {
+      "type": "scale",
+      "chapter": 4,
+      "kicker": "Layout 15 · scale",
+      "title": "Für wen wir arbeiten",
+      "tags": {
+        "items": ["Hersteller", "Importeure", "(Online-)Händler", "Vertreiber", "Betreiber elektronischer Marktplätze", "Fulfillment-Dienstleister", "Transporteure", "Händler und Makler von Abfällen", "Erstbehandlungsanlagen / Entsorger", "Öffentlich-rechtliche Entsorgungsträger", "Behörden & Ämter", "Entwicklungsorganisationen & -banken"],
+        "highlight": ["Hersteller", "Importeure"]
+      },
+      "points": [
+        {"lead": "Einstieg über die Pflichtenmatrix", "text": "Im Erstgespräch ordnen wir zu, welche Regelwerke für Ihre Rolle gelten."}
+      ],
+      "notes": "15 Skala (scale). Schlagworte ('tags'), eine geordnete Skala ('scale') oder ein Zeitstrahl ('timeline'), darunter ein bis zwei Punkte."
+    },
+    {
+      "type": "photo",
+      "kicker": "Layout 16 · photo",
+      "title": "Kreisläufe schließen",
+      "photo": {"file": "photos/sortierhalle.jpg"},
+      "caption": "Vom Produktdesign bis zur Verwertungsanlage: alles aus einer Hand.",
+      "notes": "16 Foto (photo). Foto über die ganze Folie, Textkarte unten links."
+    },
+    {
+      "type": "photo_pair",
+      "chapter": 2,
+      "kicker": "Layout 17 · photo_pair",
+      "title": "Zwei Boxen, zwei Stoffströme",
+      "left": {"label": "Green Box · Textilien", "photo": {"file": "photos/green-box.jpg", "fit": true}},
+      "right": {"label": "Electro-Box · WEEE & Batterien", "photo": {"file": "photos/electro-box.jpg", "fit": true}},
+      "notes": "17 Zwei Fotos (photo_pair). Produktbilder mit 'fit' ganz zeigen."
+    },
+    {
+      "type": "photo_annotated",
+      "chapter": 2,
+      "kicker": "Layout 18 · photo_annotated",
+      "title": "Electro-Box: gebrauchsfertige Versandeinheit",
+      "photo": {"file": "photos/electro-box.jpg", "fit": true},
+      "markers": [
+        {"x": 0.54, "y": 0.27, "label": "Geprüfter Innenbehälter 4H2"},
+        {"x": 0.36, "y": 0.43, "label": "Isolierender Einsatz"},
+        {"x": 0.33, "y": 0.76, "label": "Außenkarton"},
+        {"x": 0.67, "y": 0.58, "label": "Gefahrgut-Kennzeichnung UN 3481"}
+      ],
+      "notes": "18 Foto mit Markierungen (photo_annotated). Bis zu fünf Markierungen, Position als Anteil der Bildfläche."
+    },
+    {
+      "type": "case",
+      "chapter": 4,
+      "kicker": "Layout 19 · case",
+      "title": "Praxisfall: Elektrogeräte mit Akku importieren",
+      "story": "Ein Online-Händler bezieht Lautsprecher mit fest eingebautem Akku aus Asien und verkauft sie in Deutschland an Endkunden.",
+      "columns": ["Situation", "Pflicht laut Matrix"],
+      "findings": [
+        {"finding": "Importiert Elektrogeräte", "cause": "Registrierung nach ElektroG § 6"},
+        {"finding": "Gerät enthält eine Batterie", "cause": "Pflichten nach Batterierecht (BattG)"},
+        {"finding": "Bringt Produkte in Verkehr", "cause": "Produktverantwortung nach § 23 KrWG"},
+        {"finding": "Verkauft an Endkunden", "cause": "Rücknahme (ElektroG § 17) und Informationspflichten"}
+      ],
+      "notes": "19 Praxisfall (case). Fall in zwei, drei Sätzen und bis zu fünf Zeilen; Spaltenköpfe über 'columns'."
+    },
+    {
+      "type": "quote",
+      "chapter": 1,
+      "kicker": "Layout 20 · quote",
+      "quote": "Hinter jedem Paragrafen der Kreislaufwirtschaft steht im Kern eine Haltung gegenüber den Ressourcen unserer Erde.",
+      "name": "Florian Werthmann",
+      "role": "Geschäftsführer, ecowerth GmbH",
+      "photo": {"file": "photos/florian-werthmann.jpg"},
+      "notes": "20 Zitat (quote). Zitat mit Porträt, Name und Funktion; ohne Foto rückt der Text nach links."
+    },
+    {
+      "type": "quiz",
+      "chapter": 4,
+      "question": "Welche Regelwerke treffen einen Importeur von Elektrogeräten mit Batterie?",
+      "options": ["Nur das KrWG", "KrWG, ElektroG und BattG", "GewAbfV und NachwV"],
+      "answer": 1,
+      "explanation": "Laut Pflichtenmatrix gelten für Importeure KrWG, ElektroG und BattG – ElektroG und BattG, soweit Elektrogeräte bzw. Batterien betroffen sind.",
+      "notes": "21 Wissenscheck (quiz). Frage mit drei Antworten, Auflösung auf der Folgefolie."
+    },
+    {
+      "type": "summary",
+      "chapter": 5,
+      "kicker": "Layout 22 · summary",
+      "title": "Kreislaufwirtschaft aus einer Hand",
+      "items": [
+        {"title": "Ganzheitlich", "text": "Beratung, Systembetrieb und Fläche greifen ineinander."},
+        {"title": "Rechtskonform", "text": "Pflichten nach Rolle zugeordnet, umgesetzt und dokumentiert."},
+        {"title": "Nachhaltig", "text": "Aus gesetzlichen Auflagen wird ein Beitrag für die Zukunft."},
+        {"title": "Ein Vertragspartner", "text": "Alle drei Marken über die ecowerth GmbH."},
+        {"title": "Gleiche Ansprechpartner", "text": "Teams und Mandate bleiben, wie sie sind."}
+      ],
+      "notes": "22 Zusammenfassung (summary). Bis zu fünf Punkte mit Haken."
+    },
+    {
+      "type": "closing",
+      "chapter": 5,
+      "kicker": "Layout 23 · closing",
+      "title": "Lernen Sie uns kennen",
+      "steps": [
+        {"title": "Rolle und Produkte schildern", "text": "Welche Produkte Sie in Verkehr bringen oder welche Abfälle anfallen."},
+        {"title": "Pflichten sortieren", "text": "Wir ordnen zu, welche Regelwerke für Sie gelten."},
+        {"title": "Umsetzung aus einer Hand", "text": "Beratung, Systembetrieb und Fläche mit einem Vertragspartner."}
+      ],
+      "next": {"label": "Kontakt", "title": "Florian Werthmann", "text": "Geschäftsführer, ecowerth GmbH\n+49 151 10 855 833\nflorian.werthmann@ecowerth.de"},
+      "notes": "23 Abschluss (closing). Bis zu drei nächste Schritte und eine Kontaktkarte."
+    }
+  ]
+}

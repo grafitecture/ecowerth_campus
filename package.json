@@ -1,0 +1,9 @@
+{
+  "name": "ecowerth-campus",
+  "private": true,
+  "description": "ECOWERTH Campus – Präsentationsseite mit Passwortschutz (Vercel Routing Middleware). Die Seite selbst ist statisch und liegt in site/.",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@vercel/functions": ">=1.5.0"
+  }
+}

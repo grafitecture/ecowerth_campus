@@ -1,0 +1,114 @@
+/* ECOWERTH Campus – Login. Der Kreislauf aus dem Hero der Website, vergrößert; das Formular sitzt
+   in seinem weißen Kern. Kopf- und Fußzeile wie auf der Website. */
+@font-face { font-family: "Archivo"; src: url("/assets/fonts/archivo-600.woff2?v=1") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("/assets/fonts/ibm-plex-sans-400.woff2?v=1") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("/assets/fonts/ibm-plex-sans-500.woff2?v=1") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("/assets/fonts/ibm-plex-sans-600.woff2?v=1") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("/assets/fonts/ibm-plex-mono-500.woff2?v=1") format("woff2"); font-weight: 500; font-display: swap; }
+
+:root {
+  --navy: #043751; --blue: #117EC2; --green: #6EA52E; --red: #AC1920; --grey: #D9D9D9;
+  --bg: #F4F6F8; --surface: #FFFFFF; --muted: #4A6079; --field: #7F92A5; --hover: #EEF2F5;
+  --green-ink: #4F7A1E;
+  --shadow: 0 1px 2px rgba(4, 55, 81, .06), 0 12px 32px -18px rgba(4, 55, 81, .45);
+  --f-display: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+html, body { margin: 0; background: var(--bg); }
+#gate {
+  min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
+  color: var(--navy); font-family: var(--f-body); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+}
+#gate *, #gate *::before, #gate *::after { box-sizing: border-box; }
+#gate :focus-visible { outline: 2.5px solid var(--green); outline-offset: 3px; }
+
+.g-head { flex: none; height: 82px; border-bottom: 1px solid var(--grey); background: var(--bg); position: relative; z-index: 2; }
+.g-bar {
+  max-width: 1180px; height: 100%; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+}
+.g-head .g-bar { justify-content: flex-start; gap: 14px; }
+.g-logo { display: block; height: 34px; width: auto; }
+.g-campus {
+  font-family: var(--f-mono); font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--green-ink); padding-left: 14px; border-left: 1px solid var(--grey); line-height: 1.6;
+}
+
+/* Bühne: schmal zuerst (Kreis oben, Formular darunter) */
+.g-stage {
+  flex: 1 0 auto; position: relative; display: flex; flex-direction: column; align-items: center; gap: 22px;
+  padding: 24px 24px 32px;
+}
+.g-loop { display: block; width: min(240px, 64vw); height: auto; overflow: visible; }
+.g-core {
+  width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--grey); border-radius: 4px;
+  box-shadow: var(--shadow); padding: 28px 24px 26px;
+}
+
+.g-hair { fill: none; stroke: var(--grey); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.g-spin { transform-origin: 110px 110px; animation: g-rot 26s linear infinite; }
+.g-orbit { transform-origin: 110px 110px; animation: g-rot 11s linear infinite; }
+.g-arc { fill: none; stroke-width: 10; stroke-linecap: round; stroke-dasharray: 118 335; transition: stroke-dasharray .55s cubic-bezier(.3, .7, .2, 1); }
+.g-arc--c { stroke: var(--blue); stroke-dashoffset: 0; }
+.g-arc--r { stroke: var(--green); stroke-dashoffset: -151; }
+.g-arc--i { stroke: var(--red); stroke-dashoffset: -302; }
+.g-dot { fill: var(--navy); transform-box: fill-box; transform-origin: center; transition: opacity .3s ease; }
+@keyframes g-rot { to { transform: rotate(360deg); } }
+
+.g-form { margin: 0; display: flex; flex-direction: column; gap: 18px; }
+.g-title { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: clamp(24px, 1.4vw + 16px, 30px); line-height: 1.1; letter-spacing: -.02em; }
+.g-msg { margin: -6px 0 0; font-size: 15px; color: var(--muted); min-height: 3.1em; }
+.g-msg.is-error { color: var(--red); }
+.g-group { display: flex; flex-direction: column; gap: 7px; text-align: left; }
+.g-label { font-family: var(--f-mono); font-size: 11.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.g-group input {
+  display: block; width: 100%; height: 48px; margin: 0; padding: 0 14px;
+  font-family: var(--f-body); font-size: 16px; font-weight: 500; letter-spacing: .04em; color: var(--navy);
+  background: var(--surface); border: 1px solid var(--field); border-radius: 4px; outline: none;
+  transition: border-color .16s ease, box-shadow .16s ease;
+}
+.g-group input:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(17, 126, 194, .22); }
+.g-group input[aria-invalid="true"] { border-color: var(--red); box-shadow: 0 0 0 3px rgba(172, 25, 32, .15); }
+.g-remember { display: flex; align-items: center; gap: 10px; font-size: 14px; cursor: pointer; user-select: none; }
+.g-remember input { width: 18px; height: 18px; margin: 0; accent-color: var(--green-ink); cursor: pointer; }
+.g-submit {
+  width: 100%; height: 48px; margin: 2px 0 0; padding: 0 18px; border: 1px solid var(--navy); border-radius: 4px;
+  background: var(--navy); color: var(--surface); font-family: var(--f-body); font-size: 15px; font-weight: 600; cursor: pointer;
+  transition: background .16s ease, border-color .16s ease;
+}
+.g-submit:hover:not(:disabled) { background: var(--green-ink); border-color: var(--green-ink); }
+.g-submit:disabled { cursor: default; }
+@keyframes g-nudge { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(2px); } }
+.g-group.is-nudge input { animation: g-nudge .36s cubic-bezier(.36, .07, .19, .97); }
+
+.g-foot { flex: none; border-top: 1px solid var(--grey); background: var(--bg); position: relative; z-index: 2; }
+.g-foot .g-bar { height: auto; padding-block: 14px; flex-wrap: wrap; row-gap: 6px; font-family: var(--f-mono); font-size: 12px; letter-spacing: .02em; color: var(--muted); }
+.g-legal { display: flex; gap: 18px; }
+.g-legal a { color: inherit; text-decoration: none; }
+.g-legal a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Großer Bildschirm: Formular im Kern des Kreislaufs */
+@media (min-width: 760px) and (min-height: 600px) {
+  #gate { height: 100vh; height: 100dvh; overflow: hidden; }
+  .g-stage { flex: 1 1 auto; min-height: 0; overflow: hidden; display: grid; place-items: center; --disc: clamp(420px, min(100vh - 190px, 46vw), 472px); }
+  .g-loop { position: absolute; left: 50%; top: 50%; width: calc(var(--disc) * 2); height: calc(var(--disc) * 2); max-width: none; transform: translate(-50%, -50%); }
+  .g-arc { stroke-width: 5.5; }
+  .g-dot { transform: scale(.62); }
+  .g-core { position: relative; z-index: 1; width: var(--disc); max-width: none; aspect-ratio: 1 / 1; border-radius: 50%; padding: 0; display: grid; place-items: center; transition: transform .7s cubic-bezier(.2, .7, .2, 1); }
+  .g-form { width: min(256px, 61%); align-items: center; text-align: center; }
+  .g-msg { max-width: 30ch; }
+  .g-group { width: 100%; }
+  .g-remember { justify-content: center; }
+}
+
+/* Öffnen: die drei Bögen schließen sich zum Ring */
+#gate.is-open .g-arc { stroke-dasharray: 151 302; }
+#gate.is-open .g-dot { opacity: 0; }
+#gate.is-open .g-core { transform: scale(1.035); }
+
+@media (prefers-reduced-motion: reduce) {
+  .g-spin, .g-orbit, .g-group.is-nudge input { animation: none; }
+  .g-arc, .g-dot, .g-core { transition: none; }
+}

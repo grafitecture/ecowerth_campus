@@ -1,0 +1,305 @@
+{
+  "presentation": {
+    "title": "Zukunft im Kreislauf",
+    "subtitle": "Kreislaufwirtschaft aus einer Hand. Ganzheitlich. Rechtskonform. Nachhaltig.",
+    "kicker": "ECOWERTH · Unternehmenspräsentation",
+    "presenter": {"name": "Florian Werthmann", "role": "Geschäftsführer, ecowerth GmbH"},
+    "date": "Oktober 2026 · Reichenberg",
+    "chapters": ["Die Gruppe", "Unsere Marken", "Leistungen", "Rechtsrahmen", "Zusammenarbeit"]
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "notes": "Willkommen. ECOWERTH ist die neue Dachmarke für vier Unternehmen der Kreislaufwirtschaft – Beratung, Systembetrieb und Fläche aus einer Hand."
+    },
+    {
+      "type": "agenda",
+      "items": [
+        {"title": "Die Gruppe", "text": "Vier Unternehmen. Ein Kreislauf."},
+        {"title": "Unsere Marken", "text": "Ein Dach, drei Marken."},
+        {"title": "Leistungen", "text": "Acht Leistungsfelder entlang der Pflichtenkette."},
+        {"title": "Rechtsrahmen", "text": "Ihre Pflichten. Unsere Systematik."},
+        {"title": "Zusammenarbeit", "text": "Ein Gespräch, in dem Ihre Pflichten sortiert werden."}
+      ]
+    },
+    {
+      "type": "hook",
+      "kicker": "Einstieg",
+      "quote": "Sie wissen nicht, welche Pflichten Sie treffen?",
+      "truth": {"text": "Ob KrWG, ElektroG oder EU-VO 2024/1157: Welche Pflicht gilt, hängt an Ihrer Rolle im Materialkreislauf."},
+      "answer": {"text": "Wir ordnen zu, welche Pflicht für Ihre Rolle gilt – und setzen sie um. Beratung, Systembetrieb und Fläche aus einer Hand."},
+      "notes": "Wir überführen Ihre gesetzlichen Recyclingpflichten in strukturierte und praxistaugliche Prozesse. Sie fokussieren sich auf Ihre Produktion, während wir die Einhaltung der Umweltstandards organisieren."
+    },
+    {"type": "chapter", "chapter": 1, "line": "Vier Unternehmen. Ein Kreislauf."},
+    {
+      "type": "statement",
+      "chapter": 1,
+      "big": "4",
+      "statement": "Unternehmen gehen in der ecowerth GmbH auf",
+      "text": "Ecologicon GmbH · ECO ReLoop GmbH · Eco Park Röthlein GmbH · Maintal Recycling UG",
+      "notes": "Was bisher auf vier Firmierungen verteilt war, arbeitet künftig unter einem Dach – in drei klar geschnittenen Marken und mit unveränderten Ansprechpartnern."
+    },
+    {
+      "type": "compare",
+      "chapter": 1,
+      "title": "Was sich ändert – und was nicht",
+      "style": "neutral",
+      "left": {"label": "Was sich ändert", "items": ["Eine Firmierung: die ecowerth GmbH", "Drei klar geschnittene Marken", "Ein Vertragspartner für Beratung, Systembetrieb und Fläche"]},
+      "right": {"label": "Was bleibt", "items": ["Teams und Projektverantwortliche", "Laufende Mandate, Systemverträge und Mietverhältnisse", "Standorte Reichenberg, Röthlein und Singapur"]},
+      "notes": "Statt vier Verträgen mit vier Gesellschaften bündelt die ecowerth GmbH alles in einem Vertragsverhältnis – auf Wunsch weiterhin je Marke getrennt."
+    },
+    {
+      "type": "quote",
+      "chapter": 1,
+      "kicker": "Haltung",
+      "quote": "Hinter jedem Paragrafen der Kreislaufwirtschaft steht im Kern eine Haltung gegenüber den Ressourcen unserer Erde.",
+      "name": "Florian Werthmann",
+      "role": "Geschäftsführer, ecowerth GmbH",
+      "photo": {"file": "photos/florian-werthmann.jpg"},
+      "notes": "„Ich bin angetreten, um diese Verantwortung für Ihr Unternehmen so transparent, verlässlich und unkompliziert wie nur möglich zu gestalten.“"
+    },
+    {
+      "type": "facts",
+      "chapter": 1,
+      "title": "ECOWERTH in Zahlen",
+      "lead": "Was bisher auf vier Firmierungen verteilt war, arbeitet künftig unter einem Dach.",
+      "facts": [
+        {"value": "4", "label": "Unternehmen unter einem Dach"},
+        {"value": "3", "label": "Marken: ECOLOGICON · ECORELOOP · ECOINVEST"},
+        {"value": "12", "label": "abgedeckte Zielgruppen entlang der Pflichtenkette"},
+        {"value": "8.000 m²", "label": "eigener Standort ECO Park Röthlein"}
+      ]
+    },
+    {"type": "chapter", "chapter": 2, "line": "Ein Dach, drei Marken."},
+    {
+      "type": "brands",
+      "chapter": 2,
+      "title": "Ein Dach, drei Marken",
+      "columns": [
+        {"brand": "ecologicon", "label": "Beratung", "from": "bisher: Ecologicon GmbH",
+         "text": "Die externe Umweltabteilung für Hersteller, Importeure und Entsorger.",
+         "items": ["Beauftragtenwesen & Betreiberpflichten", "EPR & Herstellerverantwortung", "Abfallverbringung & Cross-Border", "ESG-, CSRD- & Mengenstromreporting"]},
+        {"brand": "ecoreloop", "label": "Systembetrieb", "from": "bisher: ECO ReLoop GmbH",
+         "text": "Der operative Arm für Elektroaltgeräte, Batterien und Textilien.",
+         "items": ["Rücknahme- & Sammelsysteme", "Zwischenlagerung Batterien & Abfälle", "Notifizierungsverfahren", "Green Box & Electro-Box"]},
+        {"brand": "ecoinvest", "label": "Flächen & Anlagen", "from": "bisher: Eco Park Röthlein GmbH & Maintal Recycling UG",
+         "text": "Genehmigungsfähige Flächen und Betreiberkonzepte für die Kreislaufwirtschaft.",
+         "items": ["Gewerbeimmobilien Kreislaufwirtschaft", "ECO Park Röthlein · 8.000 m²", "Genehmigungs- & Betreiberkonzepte", "Operative Recyclingkapazität"]}
+      ],
+      "notes": "Nach außen tritt ECOWERTH als Gruppe auf, nach innen bleibt jede Marke ein eigener Betrieb mit eigenem Team und eigenen Verträgen. Kunden beauftragen eine einzelne Marke oder alle drei über einen Vertragspartner."
+    },
+    {
+      "type": "points_photo",
+      "chapter": 2,
+      "kicker": "ECOLOGICON",
+      "title": "Ihre externe Umweltabteilung",
+      "points": [
+        {"lead": "Pflichtenanalyse", "text": "Welche Regelwerke für Ihre Rolle gelten – und was daraus folgt."},
+        {"lead": "Umsetzung", "text": "Beauftragtenwesen, Dokumentation und Behördenkommunikation."},
+        {"lead": "Arbeitsweise", "text": "Als Mandat, Projekt oder Interim – national wie international."}
+      ],
+      "photo": {"file": "photos/sammelbehaelter-tablet.jpg"},
+      "caption": "Standorte Reichenberg und Singapur",
+      "notes": "ECOLOGICON trägt das vollständige Leistungsportfolio der Gruppe – Beauftragtenwesen, Produktverantwortung, Abfallverbringung, Reporting."
+    },
+    {
+      "type": "points",
+      "chapter": 2,
+      "kicker": "ECORELOOP",
+      "title": "Vom Konzept bis zum Tagesbetrieb",
+      "points": [
+        {"lead": "Rücknahme- & Recyclinglösungen", "text": "Für Elektroaltgeräte und Batterien – von der Sammelstelle bis zum Verwerter."},
+        {"lead": "Zwischenlagerung", "text": "Batterien und Abfälle nach höchsten Sicherheits- und Brandschutzstandards."},
+        {"lead": "Abfalllogistik & Verbringung", "text": "Komplette Logistikketten, national und grenzüberschreitend."},
+        {"lead": "Notifizierungsverfahren", "text": "Behördenmanagement für grenzüberschreitende Genehmigungen."}
+      ],
+      "legal": ["EU-VO 2024/1157"],
+      "notes": "Wir verbinden regulatorisches Wissen, operative Umsetzung und digitale Transparenz – und machen aus gesetzlichen Pflichten funktionierende Kreisläufe."
+    },
+    {
+      "type": "photo_pair",
+      "chapter": 2,
+      "kicker": "ECORELOOP · Vorkonfigurierte Lösungen",
+      "title": "Zwei Boxen, zwei Stoffströme",
+      "left": {"label": "Green Box · Textilien", "photo": {"file": "photos/green-box.jpg", "fit": true}},
+      "right": {"label": "Electro-Box · WEEE & Batterien", "photo": {"file": "photos/electro-box.jpg", "fit": true}},
+      "notes": "Green Box: sichere Vernichtung und Verwertung gebrandeter Corporate Clothing, Markenschutz auf dem Sekundärmarkt. Electro-Box: gebrauchsfertige Versandeinheit für Elektroaltgeräte mit und ohne Batterie."
+    },
+    {
+      "type": "photo_annotated",
+      "chapter": 2,
+      "kicker": "ECORELOOP · Electro-Box",
+      "title": "Gebrauchsfertige Versandeinheit",
+      "photo": {"file": "photos/electro-box.jpg", "fit": true},
+      "markers": [
+        {"x": 0.54, "y": 0.27, "label": "Geprüfter Innenbehälter 4H2"},
+        {"x": 0.36, "y": 0.43, "label": "Isolierender Einsatz"},
+        {"x": 0.33, "y": 0.76, "label": "Außenkarton"},
+        {"x": 0.67, "y": 0.58, "label": "Gefahrgut-Kennzeichnung UN 3481"}
+      ],
+      "notes": "Sie sammeln die Altgeräte dort, wo sie anfallen – wir übernehmen Abholung, Verwertung und die vollständige Nachweisführung."
+    },
+    {
+      "type": "points_chart",
+      "chapter": 2,
+      "kicker": "ECOINVEST",
+      "title": "ECO Park Röthlein",
+      "points": [
+        {"lead": "Lage", "text": "Industriegebiet Röthlein, direkt an der A70 bei Schweinfurt."},
+        {"lead": "Infrastruktur", "text": "Eigene Lkw-Waage, Trafostation und installierte Brandmeldeanlage."},
+        {"lead": "Perspektive", "text": "Hallenerweiterung bis 1.000 m², PV-Potenzial auf den Dachflächen."}
+      ],
+      "chart": {
+        "title": "Flächen am Standort",
+        "bars": [
+          {"label": "Grundstück", "value": 100, "display": "8.000 m²", "highlight": true},
+          {"label": "Lager- und Produktionsfläche", "value": 22.5, "display": "1.800 m²"},
+          {"label": "Kalthalle", "value": 5, "display": "400 m²"},
+          {"label": "Büroflächen, klimatisiert", "value": 2.5, "display": "200 m²"}
+        ],
+        "note": "Alle Angaben ca.; der Standort ist derzeit vollständig vermietet."
+      },
+      "notes": "Moderne Gewerbeimmobilie, ausgelegt auf Recycling und Kreislaufwirtschaft. Anfragen zu Erweiterungsflächen und künftigen Verfügbarkeiten nehmen wir gerne auf."
+    },
+    {
+      "type": "steps",
+      "chapter": 2,
+      "kicker": "ECOINVEST · Standort",
+      "title": "ECO Park Röthlein in Bildern",
+      "caption": "Echte Standortfotos folgen – bis dahin Platzhalter mit Bildbriefing.",
+      "steps": [
+        {"title": "Luftbild Standort", "photo": {"brief": "Foto: Luftbild ECO Park Röthlein"}},
+        {"title": "Halle innen", "photo": {"brief": "Foto: Lager- und Produktionsfläche"}},
+        {"title": "Anlieferung", "photo": {"brief": "Foto: Lkw-Waage und Anlieferung"}}
+      ]
+    },
+    {"type": "chapter", "chapter": 3, "line": "Acht Leistungsfelder entlang der Pflichtenkette."},
+    {
+      "type": "checklist",
+      "chapter": 3,
+      "title": "Portfolio 2026: acht Leistungsfelder",
+      "items": [
+        "Beauftragtenwesen, Betreiberpflichten & Verpflichtungsumsetzung",
+        "Abfallverbringung, BASEL & internationale Entsorgungsprozesse",
+        "Erweiterte Herstellerverantwortung (EPR) & Rücknahmesysteme",
+        "Systemarchitektur, Umsetzung & Kreislaufwirtschaftskonzepte",
+        "Standort: Managementsysteme, Genehmigungswesen & Zertifizierung",
+        "Beratung zu Technologien & Prozessen",
+        "Reporting & Wirtschaftlichkeit",
+        "Operative Umsetzung, Projekte & internationale Konzernservices"
+      ],
+      "notes": "Jedes Feld ist einzeln beauftragbar und wird markenübergreifend aus ECOLOGICON, ECORELOOP und ECOINVEST erbracht."
+    },
+    {
+      "type": "points",
+      "chapter": 3,
+      "title": "Compliance, die im Betrieb funktioniert",
+      "points": [
+        {"lead": "Beauftragtenwesen", "text": "Externe Abfall-, Immissionsschutz- und Gefahrgutbeauftragte."},
+        {"lead": "Product Compliance", "text": "Recyclingfähigkeit, Kennzeichnung sowie CE-, REACH- und SCIP-Konformität."},
+        {"lead": "Erweiterte Herstellerverantwortung", "text": "Registrierung, Mengenmeldung, Systembeteiligung, eigene Rücknahme."},
+        {"lead": "Reporting & Managed Services", "text": "ESG- und CSRD-Kennzahlen, Mengenstromvalidierung, Interimsmanagement."}
+      ],
+      "legal": ["§ 59 KrWG", "§ 23 KrWG", "ElektroG § 6", "BImSchG"],
+      "notes": "Wir verstehen uns als Ihre externe Compliance-Abteilung für sämtliche Themen rund um Umweltverantwortung und Nachhaltigkeit."
+    },
+    {
+      "type": "steps",
+      "chapter": 3,
+      "title": "Von der Pflicht zum Kreislauf",
+      "steps": [
+        {"title": "Pflichten analysieren", "text": "Welche Regelwerke gelten für Ihre Produkte und Abfälle?"},
+        {"title": "System aufbauen", "text": "Rücknahme- und Sammelsysteme, abgestimmt auf Ihre Stoffströme."},
+        {"title": "Sammeln und lagern", "text": "Logistik und Zwischenlagerung nach höchsten Sicherheitsstandards."},
+        {"title": "Verwerten und nachweisen", "text": "Verwertung mit vollständiger Nachweisführung."}
+      ]
+    },
+    {
+      "type": "photo",
+      "chapter": 3,
+      "title": "Kreisläufe schließen",
+      "photo": {"file": "photos/sortierhalle.jpg"},
+      "caption": "Vom Produktdesign bis zur Verwertungsanlage: alles aus einer Hand."
+    },
+    {"type": "chapter", "chapter": 4, "line": "Ihre Pflichten. Unsere Systematik."},
+    {
+      "type": "matrix",
+      "chapter": 4,
+      "title": "Welche Pflicht trifft welche Rolle?",
+      "corner": "Akteur",
+      "columns": ["KrWG", "ElektroG", "BattG", "GewAbfV", "NachwV", "AbfAEV"],
+      "rows": [
+        {"label": "Transporteur von Abfällen", "cells": [true, false, false, false, true, true]},
+        {"label": "Entsorgungsunternehmen / Entsorger", "cells": [true, true, true, true, true, true]},
+        {"label": "Hersteller von Elektrogeräten", "cells": [true, true, false, false, false, false]},
+        {"label": "Vertreiber von Elektrogeräten", "cells": [true, true, false, false, false, false]},
+        {"label": "Batteriehersteller / -importeure", "cells": [true, false, true, false, false, false]},
+        {"label": "Vertreiber von Batterien", "cells": [true, false, true, false, false, false]},
+        {"label": "Rücknahmesysteme", "cells": [true, true, true, false, false, false]},
+        {"label": "Gewerbliche Abfallerzeuger", "cells": [true, false, false, true, true, true]},
+        {"label": "Händler / Makler von Abfällen", "cells": [true, false, false, false, true, true]},
+        {"label": "Importeure", "cells": [true, true, true, false, false, false]}
+      ],
+      "note": "Quelle: interne Zielgruppen-/Pflichtenmatrix ECO, Stand 2025. ElektroG und BattG gelten für Importeure, soweit Elektrogeräte bzw. Batterien betroffen sind.",
+      "notes": "Die Matrix zeigt, welche Regelwerke für Ihre Rolle im Materialkreislauf gelten. Sie ist der Einstieg in jedes Erstgespräch."
+    },
+    {
+      "type": "scale",
+      "chapter": 4,
+      "title": "Für wen wir arbeiten",
+      "tags": {
+        "items": ["Hersteller", "Importeure", "(Online-)Händler", "Vertreiber", "Betreiber elektronischer Marktplätze", "Fulfillment-Dienstleister", "Transporteure", "Händler und Makler von Abfällen", "Erstbehandlungsanlagen / Entsorger", "Öffentlich-rechtliche Entsorgungsträger", "Behörden & Ämter", "Entwicklungsorganisationen & -banken"]
+      },
+      "points": [
+        {"lead": "Einstieg über die Pflichtenmatrix", "text": "Im Erstgespräch ordnen wir zu, welche Regelwerke für Ihre Rolle gelten."}
+      ]
+    },
+    {
+      "type": "case",
+      "chapter": 4,
+      "title": "Praxisfall: Elektrogeräte mit Akku importieren",
+      "story": "Ein Online-Händler bezieht Lautsprecher mit fest eingebautem Akku aus Asien und verkauft sie in Deutschland an Endkunden.",
+      "columns": ["Situation", "Pflicht laut Matrix"],
+      "findings": [
+        {"finding": "Importiert Elektrogeräte", "cause": "Registrierung nach ElektroG § 6"},
+        {"finding": "Gerät enthält eine Batterie", "cause": "Pflichten nach Batterierecht (BattG)"},
+        {"finding": "Bringt Produkte in Verkehr", "cause": "Produktverantwortung nach § 23 KrWG"},
+        {"finding": "Verkauft an Endkunden", "cause": "Rücknahme (ElektroG § 17) und Informationspflichten"}
+      ],
+      "notes": "Beispiel zur Veranschaulichung der Matrix; im Einzelfall prüfen wir die konkrete Rolle und die aktuelle Rechtslage."
+    },
+    {
+      "type": "quiz",
+      "chapter": 4,
+      "question": "Welche Regelwerke treffen einen Importeur von Elektrogeräten mit Batterie?",
+      "options": ["Nur das KrWG", "KrWG, ElektroG und BattG", "GewAbfV und NachwV"],
+      "answer": 1,
+      "explanation": "Laut Pflichtenmatrix gelten für Importeure KrWG, ElektroG und BattG – ElektroG und BattG, soweit Elektrogeräte bzw. Batterien betroffen sind."
+    },
+    {"type": "chapter", "chapter": 5, "line": "Lernen Sie uns kennen."},
+    {
+      "type": "summary",
+      "chapter": 5,
+      "title": "Kreislaufwirtschaft aus einer Hand",
+      "items": [
+        {"title": "Ganzheitlich", "text": "Beratung, Systembetrieb und Fläche greifen ineinander."},
+        {"title": "Rechtskonform", "text": "Pflichten nach Rolle zugeordnet, umgesetzt und dokumentiert."},
+        {"title": "Nachhaltig", "text": "Aus gesetzlichen Auflagen wird ein Beitrag für die Zukunft."},
+        {"title": "Ein Vertragspartner", "text": "Alle drei Marken über die ecowerth GmbH."},
+        {"title": "Gleiche Ansprechpartner", "text": "Teams und Mandate bleiben, wie sie sind."}
+      ]
+    },
+    {
+      "type": "closing",
+      "chapter": 5,
+      "title": "Ein Gespräch, das Ihre Pflichten sortiert",
+      "steps": [
+        {"title": "Rolle und Produkte schildern", "text": "Welche Produkte Sie in Verkehr bringen oder welche Abfälle anfallen."},
+        {"title": "Pflichten sortieren", "text": "Wir ordnen zu, welche Regelwerke für Sie gelten."},
+        {"title": "Umsetzung aus einer Hand", "text": "Beratung, Systembetrieb und Fläche mit einem Vertragspartner."}
+      ],
+      "next": {"label": "Kontakt", "title": "Florian Werthmann", "text": "Geschäftsführer, ecowerth GmbH\n+49 151 10 855 833\nflorian.werthmann@ecowerth.de"},
+      "notes": "Wir melden uns innerhalb eines Werktages."
+    }
+  ]
+}

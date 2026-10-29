@@ -1,0 +1,8 @@
+node_modules/
+__pycache__/
+*.pyc
+.superpowers/
+.vercel/
+out/
+# Schriften für Prüfung und Rendern: lokal erzeugt (scripts/tools/fonts_from_website.py), nie einchecken
+/fonts/
