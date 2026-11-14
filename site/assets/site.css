@@ -61,12 +61,18 @@ header.site {
   border-bottom: 1px solid var(--grey);
 }
 .bar { display: flex; align-items: center; gap: 18px; height: 82px; }
-.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; flex: 0 0 auto; }
-.brand svg { height: 30px; width: auto; display: block; color: var(--navy); }
+/* Lockup: Logo | CAMPUS. Trennlinie und Schriftzug so hoch wie das Logo (--lock). */
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; flex: 0 0 auto; --lock: clamp(20px, calc((100vw - 510px) / 12.4), 30px); }
+.brand svg { height: var(--lock); width: auto; display: block; color: var(--navy); }
 .logo .sep { fill: var(--bg); }
+/* Versalhöhe IBM Plex Mono = 0,698 em: Schriftgröße = Logohöhe / 0,698; Zeilenhöhe 0,646 legt die Versalien genau in die Box. */
 .brand .campus {
-  font-family: var(--f-mono); font-size: .75rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--green-ink); padding-left: 14px; border-left: 1px solid var(--grey); line-height: 1.6;
+  display: block; height: var(--lock); white-space: nowrap;
+  font-family: var(--f-mono); font-size: calc(var(--lock) / .698); line-height: .646; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--green-ink); padding-left: 14px; border-left: 1px solid var(--grey);
+}
+@supports (text-box: trim-both cap alphabetic) {
+  .brand .campus { line-height: 1; text-box: trim-both cap alphabetic; }
 }
 nav.main { display: flex; gap: 2px; margin-left: auto; }
 nav.main a, .logout {

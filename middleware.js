@@ -80,7 +80,7 @@ function loginSeite(fehler) {
 <meta name="robots" content="noindex, nofollow">
 <title>ECOWERTH Campus · Anmeldung</title>
 <link rel="preload" href="/assets/fonts/archivo-600.woff2?v=1" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/public/login.css?v=2">
+<link rel="stylesheet" href="/assets/public/login.css?v=3">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body>
