@@ -12,7 +12,7 @@ Ein Folienplan (JSON) wird zur fertigen PowerPoint auf der Vorlage `assets/templ
 
 1. **Inhalte sammeln.** Quellen: Website, Portfolio-Übersicht, Zielgruppen-/Pflichtenmatrix. Nichts erfinden –
    fehlende Fotos als `brief` beschreiben, offene Angaben im Sprechertext (`notes`) markieren.
-2. **Plan schreiben.** Muster: `examples/ecowerth-praesentation.json` (30 Folien, Kapitel),
+2. **Plan schreiben.** Muster: `examples/ecowerth-praesentation.json` (33 Folien, Kapitel),
    alle Folientypen: `examples/layout-gallery.json`. Fotos liegen relativ zur Plandatei.
 3. **Bauen:** `python3 scripts/build_deck.py PLAN.json --out out/deck.pptx`
    Ausgabe: JSON mit `briefs` (Folien mit Foto-Platzhalter) und `warnings`. Exit-Code 2 = Fehler im Plan
