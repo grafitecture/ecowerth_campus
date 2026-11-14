@@ -1,4 +1,4 @@
-// ECOWERTH Campus – Login: Passwort prüfen lassen, bei Erfolg schließt sich der Kreislauf, dann lädt die Seite.
+// ECOWERTH Campus – Login: Passwort prüfen lassen, bei Erfolg blendet die Login-Seite aus, dann lädt die Seite.
 // Ohne JavaScript schickt das Formular normal ab; die Middleware leitet dann selbst weiter.
 (() => {
   const gate = document.getElementById("gate");
@@ -43,8 +43,8 @@
       });
       if (res.status === 204) {
         label.textContent = "Willkommen";
-        gate.classList.add("is-open");
-        setTimeout(() => location.reload(), calm ? 0 : 750);
+        gate.classList.add("is-leaving");
+        setTimeout(() => location.reload(), calm ? 0 : 320);
         return;
       }
       busy(false);

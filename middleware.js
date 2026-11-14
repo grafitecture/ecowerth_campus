@@ -68,16 +68,6 @@ function antwort(body, status, extra = {}) {
   });
 }
 
-const LOOP = `<svg class="g-loop" viewBox="0 0 220 220" aria-hidden="true" focusable="false">
-  <circle class="g-hair" cx="110" cy="110" r="86"></circle>
-  <g class="g-spin">
-    <circle class="g-arc g-arc--c" cx="110" cy="110" r="72"></circle>
-    <circle class="g-arc g-arc--r" cx="110" cy="110" r="72"></circle>
-    <circle class="g-arc g-arc--i" cx="110" cy="110" r="72"></circle>
-  </g>
-  <g class="g-orbit"><circle class="g-dot" cx="110" cy="38" r="10"></circle></g>
-</svg>`;
-
 function loginSeite(fehler) {
   const meldung = fehler
     ? '<p class="g-msg is-error" id="g-msg" role="status" aria-live="polite">Das Passwort stimmt nicht. Bitte prüfen Sie die Schreibweise.</p>'
@@ -90,17 +80,16 @@ function loginSeite(fehler) {
 <meta name="robots" content="noindex, nofollow">
 <title>ECOWERTH Campus · Anmeldung</title>
 <link rel="preload" href="/assets/fonts/archivo-600.woff2?v=1" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/public/login.css?v=1">
+<link rel="stylesheet" href="/assets/public/login.css?v=2">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <div id="gate">
   <header class="g-head"><div class="g-bar">
-    <img class="g-logo" src="/assets/public/logo.svg?v=1" alt="ECOWERTH" width="204" height="34">
+    <img class="g-logo" src="/assets/public/logo-weiss.svg?v=1" alt="ECOWERTH" width="233" height="44">
     <span class="g-campus">Campus</span>
   </div></header>
   <main class="g-stage">
-    ${LOOP}
     <div class="g-core">
       <form class="g-form" id="g-form" method="post" action="" novalidate>
         <h1 class="g-title">Präsentationsvorlage</h1>
@@ -120,7 +109,7 @@ function loginSeite(fehler) {
     <nav class="g-legal" aria-label="Rechtliches"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></nav>
   </div></footer>
 </div>
-<script src="/assets/public/login.js?v=1" defer></script>
+<script src="/assets/public/login.js?v=2" defer></script>
 </body>
 </html>`;
 }
