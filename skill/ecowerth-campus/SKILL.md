@@ -1,6 +1,6 @@
 ---
 name: ecowerth-campus
-description: Präsentationen im ECOWERTH-Erscheinungsbild als PowerPoint bauen – aus einem Folienplan (JSON) mit 23 Layouts, Textprüfung mit echten Schriftmaßen und Sichtprüfung. Verwenden, wenn für ECOWERTH, ECOLOGICON, ECORELOOP oder ECOINVEST Folien, ein Vortrag oder eine Präsentation entstehen sollen.
+description: Präsentationen im ECOWERTH-Erscheinungsbild als PowerPoint bauen – aus einem Folienplan (JSON) mit 23 Layouts, Textprüfung mit echten Schriftmaßen und Sichtprüfung. Verwenden, wenn für ECOWERTH, ECOLOGICON, ECORELOOP, ECOINVEST, ECOACADEMY oder ECOVENTURES Folien, ein Vortrag oder eine Präsentation entstehen sollen.
 ---
 
 # ECOWERTH Campus
@@ -40,16 +40,16 @@ Fehlen sie, misst sie nur ungefähr und meldet das.
 
 | type | Layout | Pflicht | optional |
 |---|---|---|---|
-| `cover` | 01 Titel | – | Titel, Untertitel, Referent aus `presentation` |
+| `cover` | 01 Titel | – | Titel, Untertitel, Referent aus `presentation`; `photo` (rechts, bis an den Rand) |
 | `agenda` | 02 Agenda | `items` 2–6 {title, text} oder Kapitel | – |
-| `chapter` | 03 Kapitel | `chapter` | `line` |
+| `chapter` | 03 Kapitel | `chapter` | `line`, `photo` (links unter der Kopfzeile) |
 | `hook` | 04 Einstieg | `quote`, `truth` {text}, `answer` {text} | `label` je Box |
 | `points` | 05 Punkte | `title`, `points` 2–4 {lead, text} | `focus` {label, title, text} |
 | `points_photo` | 06 Punkte + Foto | `title`, `points`, `photo` | `caption` |
 | `points_chart` | 07 Punkte + Grafik | `title`, `points`, `chart` {bars 2–4 {label, value 0–100, display}} | `highlight` je Balken |
 | `statement` | 08 Aussage | `big` oder `statement` | – |
 | `facts` | 09 Kennzahlen | `title`, `facts` 2–4 {value, label} | `lead` |
-| `brands` | 10 Marken | `title`, `columns` 2–3 {brand: ecologicon/ecoreloop/ecoinvest} | `label`, `from`, `text`, `items` 1–5 |
+| `brands` | 10 Marken | `title`, `columns` 2–3 {brand: ecologicon/ecoreloop/ecoinvest/ecoacademy/ecoventures} | `label`, `from`, `text`, `items` 1–5 |
 | `checklist` | 11 Checkliste | `title`, `items` 1–8 | `focus` |
 | `steps` | 12 Schritte | `title`, `steps` 3–5 {title, text} oder 2–4 {title, photo} | `start`, `caption` |
 | `compare` | 13 Vergleich | `title`, `left`/`right` {label, items 1–4} | `style`: do_dont, myth_fact, neutral |
@@ -70,8 +70,12 @@ Fehlen sie, misst sie nur ungefähr und meldet das.
 
 - Farben nur aus `scripts/campus/tokens.py`: Dunkelblau #043751, Grün #6EA52E, Blau #117EC2, Rot #AC1920.
   Marken: ECOLOGICON Blau, ECORELOOP Grün, ECOINVEST Rot – immer in dieser Reihenfolge.
+  Themengruppen: ECOACADEMY Violett #6D41A9, ECOVENTURES Orange #FF8200 (Text #A25500); auf einer eigenen
+  Folie nach den drei Marken, nicht in deren Spalten mischen.
+- Logos: Stand LOGO_ECOWERTH_LOGO_FINAL1 (mit Unterzeile); Signet nie verändern.
 - Schriften: Archivo (Titel, Zahlen), IBM Plex Sans (Text), IBM Plex Mono (Kicker, Labels, Paragrafen).
 - Titel passen auf eine Zeile; lieber eine Folie mehr als volle Folien.
 - Deutsche Anführungszeichen „…“, Gedankenstrich –, keine Pfeile oder Sonderzeichen außerhalb der Schriften.
 - Rechtsgrundlagen als Chips (`legal`), Quellen in `source`; Paragrafen exakt wie im Gesetz.
-- Der Kreislauf (drei Bögen) erscheint nur auf Titel- und Kapitelfolien; kein Schatten, kein Leuchten.
+- Titel- und Kapitelfolien tragen ein Foto (ruhige Nahaufnahme, Hände, schöne Unschärfe) statt des früheren
+  Kreislauf-Motivs; ohne `photo` bleibt die Fläche dunkelblau. Kein Schatten, kein Leuchten.

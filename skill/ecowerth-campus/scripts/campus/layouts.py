@@ -25,7 +25,7 @@ class PhDef:
 
 @dataclass
 class DecorDef:
-    kind: Literal["rect", "text", "image", "hline", "ellipse", "kreislauf"]
+    kind: Literal["rect", "text", "image", "hline", "ellipse"]
     name: str
     box: Box
     style: dict = field(default_factory=dict)
@@ -84,14 +84,12 @@ def text_ph(name: str, box: Box, size: str | float, color: str, prompt: str, fon
 
 
 def frame_decor(frame: str) -> list[DecorDef]:
-    """Rahmen je Typ: Kopfzeile mit Logo und Haarlinie, Fußlinie; Titelfolie mit Kreislauf."""
+    """Rahmen je Typ: Kopfzeile mit Logo und Haarlinie, Fußlinie; Titelfolie mit Logo (Foto rechts als Platzhalter)."""
     if frame == "full":
         return []
     if frame == "cover":
         return [
             DecorDef("image", "cover-logo", COVER_LOGO_BOX, {"file": "brand/logo-white.png"}),
-            DecorDef("kreislauf", "cover-loop", (1440, 560, 372, 372),
-                     {"core_fill": "white", "dot_color": "white", "hair_color": "line_dark"}),
         ]
     dark = frame == "dark"
     line = COLOR["line_dark"] if dark else COLOR["grey"]
@@ -127,9 +125,10 @@ def _dark(name: str, key: str, *extra: PhDef, title: bool = True, decor=()) -> L
 
 _PHOTO_CARD = {"fill": COLOR["navy"]}   # deckend und 2 px überlappend: eine Karte ohne Fugen
 
-# Kapitel: Ring links (Mitte 480/600), Text rechts
-CHAPTER_RING = (440, 600, 250, 30)       # Mitte x, Mitte y, Radius, Strichbreite
-CHAPTER_HAIR_R = 300
+# Titel und Kapitel: Foto als Fläche bis an den Folienrand (statt des früheren Kreislauf-Motivs, 14.11.2026);
+# auf Kapitelfolien unter der Kopfzeile, damit Logo und Kapitelnavigation auf Dunkelblau stehen
+COVER_PHOTO = (1100, 0, 820, 1080)
+CHAPTER_PHOTO = (0, HEAD_H + LINE_PX, 760, 1080 - HEAD_H - LINE_PX)   # unter der Kopfzeile, bis an den unteren Rand
 
 LAYOUTS: list[LayoutDef] = [
     _layout("01 Titel", "cover", "cover", [
@@ -139,19 +138,17 @@ LAYOUTS: list[LayoutDef] = [
         text_ph("Subtitle", (MARGIN_X, 690, 840, 124), "subtitle", "on_dark", "Untertitel"),
         text_ph("Presenter", (MARGIN_X, 858, 880, 52), 19, "white", "Name", "body_medium"),
         text_ph("Credentials", (MARGIN_X, 910, 880, 70), "chip", "muted_dark", "Funktion\nDatum · Ort", "mono"),
+        pic_ph("Photo", COVER_PHOTO, fill=COLOR["navy_deep"]),
     ]),
     _light("02 Agenda", "agenda"),
     _layout("03 Kapitel", "chapter", "dark", [
-        PhDef("Number", "body", (CHAPTER_RING[0] - 200, CHAPTER_RING[1] - 130, 400, 260),
-              [lvl("chapter_number", "white", "display", align="center")], ["01"], anchor="ctr"),
-        PhDef("Kicker", "body", (840, 392, 960, 36), [kicker_lvl(True)], ["Kapitel 1 von 5"]),
-        PhDef("Title", "title", (836, 436, 964, 132), [lvl("chapter_title", "white", "display", ln_spc_pct=92)],
+        pic_ph("Photo", CHAPTER_PHOTO, fill=COLOR["navy_deep"]),
+        PhDef("Number", "body", (836, 270, 700, 230),
+              [lvl("chapter_number", "green_light", "display", ln_spc_pct=85)], ["01"], anchor="b"),
+        PhDef("Kicker", "body", (840, 520, 960, 36), [kicker_lvl(True)], ["Kapitel 1 von 5"]),
+        PhDef("Title", "title", (836, 564, 964, 132), [lvl("chapter_title", "white", "display", ln_spc_pct=92)],
               ["Kapitel"]),
-        text_ph("Line", (840, 592, 880, 150), "line", "on_dark", "Ein Satz zu diesem Kapitel."),
-    ], decor=[
-        DecorDef("ellipse", "chapter-hair", (CHAPTER_RING[0] - CHAPTER_HAIR_R, CHAPTER_RING[1] - CHAPTER_HAIR_R,
-                                             2 * CHAPTER_HAIR_R, 2 * CHAPTER_HAIR_R),
-                 {"line": (COLOR["line_dark"], LINE_PX)}),
+        text_ph("Line", (840, 720, 880, 150), "line", "on_dark", "Ein Satz zu diesem Kapitel."),
     ]),
     _layout("04 Einstieg", "hook", "dark", [
         kicker_ph(True),

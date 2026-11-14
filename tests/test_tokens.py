@@ -22,8 +22,11 @@ def test_every_font_role_can_be_measured():
 
 
 def test_brands():
-    assert list(BRANDS) == ["ecologicon", "ecoreloop", "ecoinvest"]
-    assert [b["color"] for b in BRANDS.values()] == ["blue", "green", "red"]
+    assert list(BRANDS) == ["ecologicon", "ecoreloop", "ecoinvest", "ecoacademy", "ecoventures"]
+    assert [b["color"] for b in BRANDS.values()] == ["blue", "green", "red", "academy", "ventures"]
+    assert COLOR["academy"] == "6D41A9" and COLOR["ventures"] == "FF8200"
+    for b in BRANDS.values():
+        assert b["ink"] in COLOR
 
 
 def test_ph_idx_unique():

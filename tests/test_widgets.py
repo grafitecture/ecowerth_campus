@@ -3,7 +3,6 @@ import math
 import pytest
 from pptx import Presentation
 
-from campus.motifs import ARC_DEG, LOOP_COLORS, kreislauf, progress_segments
 from campus.tokens import CONTENT_W, COLOR, MARGIN_X, px
 from campus.widgets_content import FACT_MIN_W, fact_widths
 from campus.widgets_frame import NAV_LEFT, chips, header_nav
@@ -59,24 +58,6 @@ def test_chips_advance(prs, m):
     assert [s.name for s in found] == ["legal-chip-1", "legal-chip-2"]
     assert end * 6350 >= found[-1].left + found[-1].width
     assert found[0].text_frame.text == "§ 59 KrWG"
-
-
-@pytest.mark.parametrize("n", [2, 4, 6])
-def test_progress_segments(n):
-    segs = progress_segments(n, 12)
-    assert len(segs) == n
-    assert segs[0][0] == pytest.approx(-90 + 6)
-    for a0, a1 in segs:
-        assert a1 - a0 == pytest.approx(360 / n - 12)
-
-
-def test_kreislauf_colors_and_order(prs):
-    slide = new_slide(prs)
-    kreislauf(slide.shapes, 960, 540, 300, prefix="t", names=("ECOLOGICON", "ECORELOOP", "ECOINVEST"))
-    arcs = [s for s in slide.shapes if s.name.startswith("t-arc-")]
-    assert [a.line.color.rgb for a in arcs] == [COLOR[c] for c in LOOP_COLORS] or len(arcs) == 3
-    assert 0 < ARC_DEG < 120
-    assert [s.name for s in slide.shapes if s.name.startswith("t-name-")] == ["t-name-1", "t-name-2", "t-name-3"]
 
 
 def test_fact_widths(m):

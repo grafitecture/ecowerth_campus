@@ -61,19 +61,11 @@ header.site {
   border-bottom: 1px solid var(--grey);
 }
 .bar { display: flex; align-items: center; gap: 18px; height: 82px; }
-/* Lockup: Logo | CAMPUS. Trennlinie und Schriftzug so hoch wie das Logo (--lock). */
-.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; flex: 0 0 auto; --lock: clamp(20px, calc((100vw - 510px) / 12.4), 30px); }
-.brand svg { height: var(--lock); width: auto; display: block; color: var(--navy); }
-.logo .sep { fill: var(--bg); }
-/* Versalhöhe IBM Plex Mono = 0,698 em: Schriftgröße = Logohöhe / 0,698; Zeilenhöhe 0,646 legt die Versalien genau in die Box. */
-.brand .campus {
-  display: block; height: var(--lock); white-space: nowrap;
-  font-family: var(--f-mono); font-size: calc(var(--lock) / .698); line-height: .646; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--green-ink); padding-left: 14px; border-left: 1px solid var(--grey);
-}
-@supports (text-box: trim-both cap alphabetic) {
-  .brand .campus { line-height: 1; text-box: trim-both cap alphabetic; }
-}
+/* Lockup ECOWERTH | CAMPUS (Vorlage LOGO_ECOWERTH_LOGO_CAMPUS, Seitenverhältnis 11,42 : 1), Höhe --lock.
+   Zwischen 761 und ca. 880 px schrumpft es stufenlos, damit die Navigation nicht überläuft. */
+.brand { display: flex; align-items: center; text-decoration: none; flex: 0 0 auto; min-width: 0;
+  --lock: clamp(20px, calc((100vw - 477px) / 11.42), 34px); }
+.brand svg { height: var(--lock); width: auto; max-width: 100%; display: block; }
 nav.main { display: flex; gap: 2px; margin-left: auto; }
 nav.main a, .logout {
   font-size: .8125rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; text-decoration: none;
@@ -180,8 +172,7 @@ nav.main a:hover { background: var(--surface-2); }
 /* ---------------------------------------------------------------- Fuß */
 footer.site { background: var(--navy); color: var(--on-dark); padding: 44px 0 36px; }
 .fgrid { display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: flex-start; justify-content: space-between; }
-.fgrid svg { height: 28px; width: auto; color: #fff; display: block; }
-.fgrid .logo .sep { fill: var(--navy); }
+.fgrid svg { height: 30px; width: auto; max-width: 100%; display: block; }
 .fgrid p { max-width: 58ch; color: var(--muted-dark); font-size: .875rem; }
 .flegal { display: flex; gap: 18px; font-family: var(--f-mono); font-size: .75rem; letter-spacing: .02em; }
 .flegal a { color: var(--muted-dark); text-decoration: none; }
@@ -191,6 +182,7 @@ footer.site { background: var(--navy); color: var(--on-dark); padding: 44px 0 36
 .legal-page{padding:72px 0 88px;background:var(--bg)}
 .legal{max-width:72ch;display:flex;flex-direction:column;gap:12px;margin-top:32px}
 .legal h1{font-size:clamp(1.8rem,3vw,2.5rem)}
+.legal-page h1{hyphens:auto; overflow-wrap:anywhere}  /* „Datenschutzerklärung“ passt bei 320 px sonst nicht */
 .legal h3{font-size:1.125rem;margin-top:26px}
 .legal p,.legal li{color:var(--muted);line-height:1.65}
 .legal ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
@@ -218,8 +210,8 @@ footer.site { background: var(--navy); color: var(--on-dark); padding: 44px 0 36
 /* ---------------------------------------------------------------- Schmal */
 @media (max-width: 760px) {
   nav.main { display: none; }
-  .brand .campus { display: none; }
-  .logout { margin-left: auto; }
+  .brand { --lock: clamp(14px, calc((100vw - 150px) / 11.42), 26px); }
+  .logout { margin-left: auto; flex: none; }
   .stage { padding-top: 36px; }
   .chapter .name { display: none; }
   .where { flex-basis: 100%; order: 3; }

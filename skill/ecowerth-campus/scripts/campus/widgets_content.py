@@ -302,13 +302,13 @@ def brand_columns(slide, columns: list[dict], m: Measurer) -> None:
             textbox(slide.shapes, f"brand-label-{i}", (x, y, w, 32), [(c["label"], label_st("muted"))])
             y += 44
         if brand.get("logo") and not c.get("title"):
-            logo_h = 32
+            logo_h = 44   # Logos mit Signet und Unterzeile (FINAL1): Name etwa so groß wie früher die reine Wortmarke
             path = ASSETS / brand["logo"]
             from PIL import Image
             with Image.open(path) as im:
                 logo_w = logo_h * im.width / im.height
             picture(slide.shapes, f"brand-logo-{i}", path, (x, y, min(logo_w, w), logo_h))
-            y += logo_h + 18
+            y += logo_h + 14
         else:
             title_st = style(28, ink, "display")
             title = c.get("title") or brand.get("name", "")

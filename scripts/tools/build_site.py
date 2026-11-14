@@ -9,6 +9,7 @@ CSS, JS und Schriften liegen fest in site/assets/. Die Login-Seite steht in midd
 import hashlib
 import html
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -34,7 +35,7 @@ DECK_PLAN = SKILL / "examples" / "ecowerth-praesentation.json"
 DECK = OUT / "ecowerth-praesentation.pptx"
 GALLERY = SKILL / "assets" / "template" / "ecowerth-campus-template.pptx"
 FULL_W, THUMB_W = 1600, 400
-STAND = "29. Oktober 2026"
+STAND = "14. November 2026"
 ASSET_VERSION = "1"  # Gleich dem ?v= der Schriften in site.css; erhöhen, wenn Browser alte Assets festhalten.
 
 
@@ -97,27 +98,43 @@ def versioned(root: Path, rel: str) -> str:
 
 # ---------------------------------------------------------------- Marke
 
-def logo_svg(css_class: str = "logo") -> str:
-    """ECOWERTH-Logo als SVG; Wortmarke in currentColor, Trennfuge (class="sep") per CSS in der Hintergrundfarbe."""
-    svg = (SKILL / "assets" / "brand" / "logo.svg").read_text(encoding="utf-8")
+def _svg_body(name: str) -> str:
+    svg = (SKILL / "assets" / "brand" / name).read_text(encoding="utf-8")
     svg = svg[svg.index("<svg"):]
-    svg = svg.replace(' width="427.71" height="71.21"', "")
-    return svg.replace("<svg", f'<svg class="{css_class}" role="img" aria-label="ECOWERTH"', 1)
+    svg = re.sub(r' (width|height|role|aria-label)="[^"]*"', "", svg.split(">", 1)[0]) + ">" + svg.split(">", 1)[1]
+    return re.sub(r"<title>[^<]*</title>", "", svg)
 
 
-def logo_file_svg() -> str:
-    """Logo als eigenständige Datei für die Login-Seite: Wortmarke Dunkelblau, Trennfuge in der Seitenfarbe."""
+def logo_svg(css_class: str = "logo") -> str:
+    """ECOWERTH-Logo (FINAL1) als Inline-SVG; Wortmarke und Unterzeile in currentColor."""
+    return _svg_body("logo.svg").replace("<svg", f'<svg class="{css_class}" role="img" aria-label="ECOWERTH"', 1)
+
+
+def campus_svg(on_dark: bool = False, css_class: str = "logo") -> str:
+    """ECOWERTH | CAMPUS (LOGO_ECOWERTH_LOGO_CAMPUS, 14.11.2026) als Inline-SVG; auf Blau Linie und CAMPUS weiß."""
+    name = "logo-campus-weiss.svg" if on_dark else "logo-campus.svg"
+    return _svg_body(name).replace("<svg", f'<svg class="{css_class}" role="img" aria-label="ECOWERTH Campus"', 1)
+
+
+def logo_file_svg(on_dark: bool = False) -> str:
+    """ECOWERTH-Logo als eigenständige Datei: Wortmarke Dunkelblau bzw. auf Blau weiß."""
     svg = (SKILL / "assets" / "brand" / "logo.svg").read_text(encoding="utf-8")
-    return svg.replace('fill="currentColor"', 'fill="#043751"').replace('class="sep" fill="#FFFFFF"', 'fill="#F4F6F8"')
+    return svg.replace('fill="currentColor"', f'fill="{"#FFFFFF" if on_dark else "#043751"}"')
 
 
 def favicon_svg() -> str:
-    """Das Signet allein (drei Balken, zwei Scherflächen) als Favicon."""
+    """Das Signet allein (drei Balken, zwei Scherflächen) als Favicon, quadratisch auf Weiß."""
     svg = (SKILL / "assets" / "brand" / "logo.svg").read_text(encoding="utf-8")
-    paths = [line for line in svg.splitlines() if line.startswith("<path") and "currentColor" not in line
-             and 'class="sep"' not in line]
-    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 119 76 76">'
-            '<rect x="64" y="119" width="76" height="76" rx="8" fill="#FFFFFF"/>' + "".join(paths) + "</svg>\n")
+    paths = [p for p in re.findall(r"<path [^>]*/>", svg) if "currentColor" not in p]
+    nums = [float(v) for p in paths for v in re.findall(r"-?\d+\.?\d*", re.search(r' d="([^"]*)"', p).group(1))]
+    xs, ys = nums[0::2], nums[1::2]
+    x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
+    side = max(x1 - x0, y1 - y0) * 1.16
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    box = f"{cx - side / 2:.2f} {cy - side / 2:.2f} {side:.2f} {side:.2f}"
+    rect = (f'<rect x="{cx - side / 2:.2f}" y="{cy - side / 2:.2f}" width="{side:.2f}" height="{side:.2f}" '
+            f'rx="{side * 0.1:.2f}" fill="#FFFFFF"/>')
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{box}">' + rect + "".join(paths) + "</svg>\n"
 
 
 # ---------------------------------------------------------------- HTML
@@ -135,7 +152,7 @@ HEAD = """<!doctype html>
 <title>{title}</title>
 <meta name="description" content="{description}">
 <link rel="preload" href="/assets/fonts/archivo-600.woff2?v={v}" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v={v}">
+<link rel="stylesheet" href="/{css}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>"""
 
@@ -143,7 +160,7 @@ HEAD = """<!doctype html>
 def _footer() -> str:
     return f"""<footer class="site">
   <div class="wrap fgrid">
-    {logo_svg()}
+    {campus_svg(on_dark=True)}
     <p>ECOWERTH Campus – Präsentationsvorlage für die ecowerth GmbH. Gestaltung und Umsetzung: Grafitecture. Stand: {STAND}.</p>
     <nav class="flegal" aria-label="Rechtliches"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></nav>
   </div>
@@ -172,14 +189,14 @@ def write_index(out_dir: Path, deck: dict, slides: list[dict], layouts: list[dic
     first = slides[0]
     data = json.dumps({"chapters": deck["chapters"], "slides": slides}, ensure_ascii=False).replace("</", "<\\/")
     count = len({lay["name"].split(" mit ")[0].split(" (")[0] for lay in layouts})
-    page = HEAD.format(title=f"ECOWERTH Campus · {e(deck['title'])}", v=ASSET_VERSION,
+    page = HEAD.format(title=f"ECOWERTH Campus · {e(deck['title'])}", v=ASSET_VERSION, css=versioned(SITE, "assets/site.css"),
                        description="ECOWERTH Campus: PowerPoint-Vorlage in der ECOWERTH-CI mit Beispiel-Präsentation.")
     page += f"""
 <body>
 <a class="skip" href="#viewer">Zur Präsentation springen</a>
 <header class="site">
   <div class="wrap bar">
-    <a class="brand" href="/" aria-label="ECOWERTH Campus, Start">{logo_svg()}<span class="campus">Campus</span></a>
+    <a class="brand" href="/" aria-label="ECOWERTH Campus, Start">{campus_svg()}</a>
     <nav class="main" aria-label="Bereiche"><a href="#folien">Folien</a><a href="#layouts">Layouts</a><a href="#dateien">Dateien</a></nav>
     <a class="logout" href="/abmelden">Abmelden</a>
   </div>
@@ -334,13 +351,13 @@ def write_legal(out_dir: Path) -> list[Path]:
     """Impressum und Datenschutz: ohne Login erreichbar (siehe middleware.js), Gestaltung wie die Seite."""
     paths = []
     for slug, title, body in (("impressum", "Impressum", IMPRESSUM), ("datenschutz", "Datenschutzerklärung", DATENSCHUTZ)):
-        page = HEAD.format(title=f"{title} · ECOWERTH Campus", v=ASSET_VERSION,
+        page = HEAD.format(title=f"{title} · ECOWERTH Campus", v=ASSET_VERSION, css=versioned(SITE, "assets/site.css"),
                            description=f"{title} der Präsentationsseite ECOWERTH Campus.")
         page += f"""
 <body>
 <header class="site">
   <div class="wrap bar">
-    <a class="brand" href="/" aria-label="ECOWERTH Campus, Start">{logo_svg()}<span class="campus">Campus</span></a>
+    <a class="brand" href="/" aria-label="ECOWERTH Campus, Start">{campus_svg()}</a>
   </div>
 </header>
 <main class="legal-page"><div class="wrap">
@@ -407,6 +424,9 @@ def main() -> None:
     public = SITE / "assets" / "public"
     public.mkdir(parents=True, exist_ok=True)
     (public / "logo.svg").write_text(logo_file_svg(), encoding="utf-8")
+    (public / "logo-weiss.svg").write_text(logo_file_svg(on_dark=True), encoding="utf-8")
+    for name in ("logo-campus.svg", "logo-campus-weiss.svg"):                # Login-Seite (ohne Anmeldung erreichbar)
+        shutil.copyfile(SKILL / "assets" / "brand" / name, public / name)
     (SITE / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
     write_legal(SITE)
     deck = {"title": pres["title"], "chapters": pres.get("chapters", [])}

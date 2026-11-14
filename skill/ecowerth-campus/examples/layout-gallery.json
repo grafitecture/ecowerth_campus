@@ -11,7 +11,8 @@
     {
       "type": "cover",
       "kicker": "Layout 01 · cover",
-      "notes": "01 Titel (cover). Kicker, Titel, Untertitel, Name und Funktion, Datum und Ort. Rechts der Kreislauf der Website mit den drei Marken im Kern."
+      "notes": "01 Titel (cover). Kicker, Titel, Untertitel, Name und Funktion, Datum und Ort. Rechts ein Foto bis an den Folienrand (photo); ohne Foto bleibt die Fläche dunkelblau.",
+      "photo": {"file": "photos/titel-batterien.jpg"}
     },
     {
       "type": "agenda",
@@ -19,7 +20,7 @@
       "title": "Inhalt",
       "items": [
         {"title": "Die Gruppe", "text": "Vier Unternehmen. Ein Kreislauf."},
-        {"title": "Unsere Marken", "text": "Ein Dach, drei Marken."},
+        {"title": "Unsere Marken", "text": "Drei Marken, zwei Themengruppen."},
         {"title": "Leistungen", "text": "Acht Leistungsfelder entlang der Pflichtenkette."},
         {"title": "Rechtsrahmen", "text": "Ihre Pflichten. Unsere Systematik."},
         {"title": "Zusammenarbeit", "text": "Ein Gespräch, in dem Ihre Pflichten sortiert werden."}
@@ -30,8 +31,9 @@
       "type": "chapter",
       "chapter": 2,
       "kicker": "Layout 03 · chapter",
-      "line": "Ein Dach, drei Marken.",
-      "notes": "03 Kapitel (chapter). Der Ring zeigt die Kapitel als Kreislauf: das aktuelle in Grün, erledigte hell."
+      "line": "Drei Marken und zwei Themengruppen unter einem Dach.",
+      "notes": "03 Kapitel (chapter). Links ein Foto bis an den Folienrand (photo), rechts Nummer, Kapitel und ein Satz.",
+      "photo": {"file": "photos/kapitel-textilien.jpg"}
     },
     {
       "type": "hook",
@@ -117,15 +119,27 @@
       "kicker": "Layout 10 · brands",
       "title": "Ein Dach, drei Marken",
       "columns": [
-        {"brand": "ecologicon", "label": "Beratung", "from": "bisher: Ecologicon GmbH",
-         "text": "Die externe Umweltabteilung für Hersteller, Importeure und Entsorger.",
-         "items": ["Beauftragtenwesen & Betreiberpflichten", "EPR & Herstellerverantwortung", "Abfallverbringung & Cross-Border", "ESG-, CSRD- & Mengenstromreporting"]},
-        {"brand": "ecoreloop", "label": "Systembetrieb", "from": "bisher: ECO ReLoop GmbH",
-         "text": "Der operative Arm für Elektroaltgeräte, Batterien und Textilien.",
-         "items": ["Rücknahme- & Sammelsysteme", "Zwischenlagerung Batterien & Abfälle", "Notifizierungsverfahren", "Green Box & Electro-Box"]},
-        {"brand": "ecoinvest", "label": "Flächen & Anlagen", "from": "bisher: Eco Park Röthlein GmbH & Maintal Recycling UG",
-         "text": "Genehmigungsfähige Flächen und Betreiberkonzepte für die Kreislaufwirtschaft.",
-         "items": ["Gewerbeimmobilien Kreislaufwirtschaft", "ECO Park Röthlein · 8.000 m²", "Genehmigungs- & Betreiberkonzepte", "Operative Recyclingkapazität"]}
+        {
+          "brand": "ecologicon",
+          "label": "Beratung",
+          "from": "bisher: Ecologicon GmbH",
+          "text": "Die externe Umweltabteilung für Hersteller, Importeure und Entsorger.",
+          "items": ["Beauftragtenwesen & Betreiberpflichten", "EPR & Herstellerverantwortung", "Abfallverbringung & Cross-Border", "ESG-, CSRD- & Mengenstromreporting"]
+        },
+        {
+          "brand": "ecoreloop",
+          "label": "Systembetrieb",
+          "from": "bisher: ECO ReLoop GmbH",
+          "text": "Der operative Arm für Elektroaltgeräte, Batterien und Textilien.",
+          "items": ["Rücknahme- & Sammelsysteme", "Zwischenlagerung Batterien & Abfälle", "Notifizierungsverfahren", "Green Box & Electro-Box"]
+        },
+        {
+          "brand": "ecoinvest",
+          "label": "Flächen & Anlagen",
+          "from": "bisher: Eco Park Röthlein GmbH & Maintal Recycling UG",
+          "text": "Genehmigungsfähige Flächen und Betreiberkonzepte für die Kreislaufwirtschaft.",
+          "items": ["Gewerbeimmobilien Kreislaufwirtschaft", "ECO Park Röthlein · 8.000 m²", "Genehmigungs- & Betreiberkonzepte", "Operative Recyclingkapazität"]
+        }
       ],
       "notes": "10 Marken (brands). Zwei oder drei Spalten; 'brand' setzt Wortmarke und Farbe der Untermarke."
     },
@@ -210,12 +224,23 @@
       "kicker": "Layout 15 · scale",
       "title": "Für wen wir arbeiten",
       "tags": {
-        "items": ["Hersteller", "Importeure", "(Online-)Händler", "Vertreiber", "Betreiber elektronischer Marktplätze", "Fulfillment-Dienstleister", "Transporteure", "Händler und Makler von Abfällen", "Erstbehandlungsanlagen / Entsorger", "Öffentlich-rechtliche Entsorgungsträger", "Behörden & Ämter", "Entwicklungsorganisationen & -banken"],
+        "items": [
+          "Hersteller",
+          "Importeure",
+          "(Online-)Händler",
+          "Vertreiber",
+          "Betreiber elektronischer Marktplätze",
+          "Fulfillment-Dienstleister",
+          "Transporteure",
+          "Händler und Makler von Abfällen",
+          "Erstbehandlungsanlagen / Entsorger",
+          "Öffentlich-rechtliche Entsorgungsträger",
+          "Behörden & Ämter",
+          "Entwicklungsorganisationen & -banken"
+        ],
         "highlight": ["Hersteller", "Importeure"]
       },
-      "points": [
-        {"lead": "Einstieg über die Pflichtenmatrix", "text": "Im Erstgespräch ordnen wir zu, welche Regelwerke für Ihre Rolle gelten."}
-      ],
+      "points": [{"lead": "Einstieg über die Pflichtenmatrix", "text": "Im Erstgespräch ordnen wir zu, welche Regelwerke für Ihre Rolle gelten."}],
       "notes": "15 Skala (scale). Schlagworte ('tags'), eine geordnete Skala ('scale') oder ein Zeitstrahl ('timeline'), darunter ein bis zwei Punkte."
     },
     {

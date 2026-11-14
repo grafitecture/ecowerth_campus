@@ -32,21 +32,9 @@ html, body { margin: 0; background: var(--band); }
   max-width: 1180px; height: 100%; margin: 0 auto; padding: 0 24px;
   display: flex; align-items: center; justify-content: space-between; gap: 18px;
 }
-/* Lockup: Logo | CAMPUS. Trennlinie und Schriftzug so hoch wie das Logo.
-   --lock = Logohöhe; schrumpft auf schmalen Bildschirmen, damit das Lockup passt. */
-.g-head .g-bar { justify-content: flex-start; gap: 14px; --lock: min(44px, calc((100vw - 80px) / 11.7)); }
-.g-logo { display: block; height: var(--lock); width: auto; }
-/* Versalhöhe IBM Plex Mono = 0,698 em: Schriftgröße = Logohöhe / 0,698; Zeilenhöhe 0,646 legt die
-   Versalien genau in die Box (Oberkante = Logo-Oberkante, Grundlinie = Logo-Unterkante). */
-.g-campus {
-  display: block; height: var(--lock); white-space: nowrap;
-  font-family: var(--f-mono); font-size: calc(var(--lock) / .698); line-height: .646; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--band-brand); padding-left: 14px; border-left: 1px solid var(--band-line);
-}
-
-@supports (text-box: trim-both cap alphabetic) {
-  .g-campus { line-height: 1; text-box: trim-both cap alphabetic; }
-}
+/* Lockup ECOWERTH | CAMPUS in der Fassung für Blau: Wortmarke, Linie und CAMPUS weiß (Seitenverhältnis 11,42 : 1). */
+.g-head .g-bar { justify-content: flex-start; --lock: min(44px, calc((100vw - 48px) / 11.42)); }
+.g-logo { display: block; height: var(--lock); width: auto; max-width: 100%; }
 
 /* Bühne: Formular als Karte, waagerecht und senkrecht mittig */
 .g-stage {

@@ -8,7 +8,7 @@ from conftest import REPO, SKILL
 sys.path.insert(0, str(REPO / "scripts" / "tools"))
 
 from campus.build import build_deck  # noqa: E402
-from build_site import (download_sources, favicon_svg, logo_file_svg, logo_svg, slide_records, versioned,  # noqa: E402
+from build_site import (campus_svg, download_sources, favicon_svg, logo_file_svg, logo_svg, slide_records, versioned,  # noqa: E402
                         write_index, write_legal)
 
 PLAN = {"presentation": {"title": "Zukunft im Kreislauf", "chapters": ["Die Gruppe", "Leistungen"]}, "slides": [
@@ -80,9 +80,13 @@ def test_versioned(tmp_path):
 
 def test_logo_variants():
     inline = logo_svg()
-    assert inline.startswith('<svg class="logo" role="img" aria-label="ECOWERTH"') and 'class="sep"' in inline
+    assert inline.startswith('<svg class="logo" role="img" aria-label="ECOWERTH"') and inline.count("aria-label") == 1
+    lockup = campus_svg()
+    assert lockup.startswith('<svg class="logo" role="img" aria-label="ECOWERTH Campus"') and lockup.count("role=") == 1
+    assert "#627078" in lockup and "#FFFFFF" in campus_svg(on_dark=True)
     standalone = logo_file_svg()
-    assert "currentColor" not in standalone and "#043751" in standalone and "#F4F6F8" in standalone
+    assert "currentColor" not in standalone and "#043751" in standalone
+    assert "#FFFFFF" in logo_file_svg(on_dark=True) and "#043751" not in logo_file_svg(on_dark=True)
     icon = favicon_svg()
     assert icon.startswith("<svg") and "currentColor" not in icon and icon.count("<path") >= 3
 
@@ -116,5 +120,6 @@ def test_site_files_are_in_git():
     refs |= {"site" + url for url in re.findall(r'url\("(/[^"?]+)', css)}
     refs |= {"site/" + url for url in re.findall(r'(?:src|href)="/((?:assets|slides|downloads)/[^"?]+)', page)}
     refs |= {"site/assets/fonts/OFL.txt", "site/assets/public/login.css", "site/assets/public/login.js",
-             "site/assets/public/logo.svg", "site/impressum.html", "site/datenschutz.html", "site/favicon.svg"}
+             "site/assets/public/logo.svg", "site/assets/public/logo-weiss.svg", "site/assets/public/logo-campus.svg",
+             "site/assets/public/logo-campus-weiss.svg", "site/impressum.html", "site/datenschutz.html", "site/favicon.svg"}
     assert sorted(ref for ref in refs if ref not in tracked) == []

@@ -88,10 +88,14 @@ def test_header_nav_marks_chapter(built):
     assert "nav-1" in names and "nav-4" in names
 
 
-def test_chapter_ring(built):
+def test_chapter_without_ring(built):
+    """Kapitel: Nummer, Kicker, Titel, Satz – kein Kapitelring mehr; ohne Foto entfällt der Bildplatzhalter."""
     _, prs, _ = built
-    names = [s.name for s in prs.slides[2].shapes if s.name.startswith("ring-seg")]
-    assert names == ["ring-seg-1-done", "ring-seg-2-active", "ring-seg-3-todo", "ring-seg-4-todo"]
+    slide = prs.slides[2]
+    assert not [s.name for s in slide.shapes if s.name.startswith("ring-")]
+    texts = [s.text_frame.text for s in slide.shapes if s.has_text_frame]
+    assert "02" in texts and "Unsere Marken" in texts
+    assert not [s for s in slide.placeholders if s.placeholder_format.idx == 15]
 
 
 def test_footer_and_page_number(built):

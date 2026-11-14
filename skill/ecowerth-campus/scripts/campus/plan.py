@@ -286,9 +286,9 @@ def _check_quiz(s):
 
 
 CHECKS = {
-    "cover": lambda s: [],
+    "cover": lambda s: _photo(s["photo"]) if "photo" in s else [],
     "agenda": None,   # braucht die Kapitel, siehe validate_plan
-    "chapter": lambda s: [] if "chapter" in s else ["'chapter' fehlt"],
+    "chapter": lambda s: ([] if "chapter" in s else ["'chapter' fehlt"]) + (_photo(s["photo"]) if "photo" in s else []),
     "hook": lambda s: _text(s, "quote") + _box(s.get("truth"), "truth", ("text",))
     + _box(s.get("answer"), "answer", ("text",)),
     "points": _check_points,

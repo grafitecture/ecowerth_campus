@@ -120,6 +120,30 @@
           0,
           0
         ]
+      },
+      "Photo": {
+        "idx": 15,
+        "type": "pic",
+        "box": [
+          1100,
+          0,
+          820,
+          1080
+        ],
+        "levels": [
+          {
+            "size_pt": 13,
+            "color": "4A6079",
+            "font": "body",
+            "align": "center"
+          }
+        ],
+        "insets": [
+          0,
+          0,
+          0,
+          0
+        ]
       }
     }
   },
@@ -181,21 +205,45 @@
     "key": "chapter",
     "frame": "dark",
     "placeholders": {
+      "Photo": {
+        "idx": 15,
+        "type": "pic",
+        "box": [
+          0,
+          114,
+          760,
+          966
+        ],
+        "levels": [
+          {
+            "size_pt": 13,
+            "color": "4A6079",
+            "font": "body",
+            "align": "center"
+          }
+        ],
+        "insets": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
       "Number": {
         "idx": 16,
         "type": "body",
         "box": [
-          240,
-          470,
-          400,
-          260
+          836,
+          270,
+          700,
+          230
         ],
         "levels": [
           {
             "size_pt": 120,
-            "color": "FFFFFF",
+            "color": "8FC65A",
             "font": "display",
-            "align": "center"
+            "ln_spc_pct": 85
           }
         ],
         "insets": [
@@ -210,7 +258,7 @@
         "type": "body",
         "box": [
           840,
-          392,
+          520,
           960,
           36
         ],
@@ -235,7 +283,7 @@
         "type": "title",
         "box": [
           836,
-          436,
+          564,
           964,
           132
         ],
@@ -259,7 +307,7 @@
         "type": "body",
         "box": [
           840,
-          592,
+          720,
           880,
           150
         ],

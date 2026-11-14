@@ -15,7 +15,7 @@ from pptx.oxml.xmlchemy import OxmlElement
 from pptx.parts.slide import SlideLayoutPart
 from pptx.shapes.shapetree import SlideShapes
 
-from . import draw, motifs, oxml
+from . import draw, oxml
 from .layouts import LAYOUTS, DecorDef, LayoutDef, PhDef, frame_decor
 from .tokens import COLOR, PH_IDX, SLIDE_EMU, THEME_MAJOR, THEME_MINOR, px
 
@@ -159,10 +159,6 @@ def _add_decor(shapes, d: DecorDef, assets_dir: Path) -> None:
     elif d.kind == "hline":
         x, y, w, h = d.box
         draw.hline(shapes, d.name, x, y, w, st["color"], h)
-    elif d.kind == "kreislauf":
-        cx, cy, r, _ = d.box
-        motifs.kreislauf(shapes, cx, cy, r, prefix=d.name, core_fill=st.get("core_fill", "white"),
-                         dot_color=st.get("dot_color", "white"), hair_color=st.get("hair_color", "grey"))
     else:
         kind = {"rect": MSO_SHAPE.RECTANGLE, "ellipse": MSO_SHAPE.OVAL}[d.kind]
         draw.shape(shapes, kind, d.name, d.box, fill=st.get("fill"), line=st.get("line"))

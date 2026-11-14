@@ -6,8 +6,7 @@ from typing import Callable
 from pptx.enum.shapes import PP_PLACEHOLDER
 from pptx.util import Pt
 
-from . import motifs
-from .layouts import CHAPTER_RING, LAYOUTS
+from .layouts import LAYOUTS
 from .measure import Measurer, Para
 from .plan import chapters_of, default_kicker
 from .tokens import EMU_PER_PX, FONTS, PH_IDX, px
@@ -95,6 +94,14 @@ def _photo(ctx: Ctx, slide, name: str, photo: dict | None) -> None:
         ctx.report.briefs.append((ctx.report.slides, brief))
 
 
+def _optional_photo(ctx: Ctx, slide, photo: dict | None) -> None:
+    """Titel und Kapitel: Foto, wenn angegeben – sonst bleibt die Fläche dunkelblau (Platzhalter entfällt)."""
+    if photo:
+        _photo(ctx, slide, "Photo", photo)
+    else:
+        remove(slide, "Photo")
+
+
 def _box_px(ph) -> tuple[float, float, float, float]:
     return tuple(v / EMU_PER_PX for v in (ph.left, ph.top, ph.width, ph.height))
 
@@ -161,6 +168,7 @@ def render_cover(ctx: Ctx, s: dict) -> None:
     fill(slide, "Subtitle", pres.get("subtitle"))
     fill(slide, "Presenter", presenter.get("name"))
     fill(slide, "Credentials", "\n".join(t for t in (presenter.get("role"), pres.get("date")) if t))
+    _optional_photo(ctx, slide, s.get("photo") or pres.get("photo"))
     _frame(ctx, slide, s)
 
 
@@ -198,8 +206,7 @@ def render_chapter(ctx: Ctx, s: dict) -> None:
     chapters = ctx.chapters
     n = s["chapter"]
     slide = new_slide(ctx, LAYOUT_BY_KEY["chapter"])
-    cx, cy, r, width = CHAPTER_RING
-    motifs.progress_ring(slide.shapes, cx, cy, r, width, len(chapters), n)
+    _optional_photo(ctx, slide, s.get("photo"))
     fill(slide, "Number", f"{n:02d}")
     fill(slide, "Kicker", s.get("kicker") or f"Kapitel {n} von {len(chapters)}")
     title = s.get("title") or chapters[n - 1]

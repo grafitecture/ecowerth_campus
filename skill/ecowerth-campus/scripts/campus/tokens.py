@@ -58,13 +58,23 @@ COLOR = {
     "on_dark": "E8EEF4",
     "muted_dark": "A3B6C9",
     "green_light": "8FC65A",
+    # Themengruppen (wie auf der Website): ECOACADEMY Violett, ECOVENTURES PANTONE 151 C
+    "academy": "6D41A9",
+    "academy_ink": "6D41A9",
+    "academy_tint": "F3ECFF",
+    "ventures": "FF8200",
+    "ventures_ink": "A25500",
+    "ventures_tint": "FFEDD9",
 }
 
-# Markenfarbe je Untermarke: Fläche/Balken und textsichere Variante
+# Markenfarbe je Untermarke und Themengruppe: Fläche/Balken und textsichere Variante.
+# Logos: Stand LOGO_ECOWERTH_LOGO_FINAL1 (14.11.2026), aus den SVGs der Website gerendert.
 BRANDS = {
     "ecologicon": {"name": "ECOLOGICON", "color": "blue", "ink": "blue_ink", "logo": "brand/ecologicon.png"},
     "ecoreloop": {"name": "ECORELOOP", "color": "green", "ink": "green_ink", "logo": "brand/ecoreloop.png"},
     "ecoinvest": {"name": "ECOINVEST", "color": "red", "ink": "red_ink", "logo": "brand/ecoinvest.png"},
+    "ecoacademy": {"name": "ECOACADEMY", "color": "academy", "ink": "academy_ink", "logo": "brand/ecoacademy.png"},
+    "ecoventures": {"name": "ECOVENTURES", "color": "ventures", "ink": "ventures_ink", "logo": "brand/ecoventures.png"},
 }
 
 SIZE_PT = {
@@ -101,9 +111,9 @@ NAV_SPC = 72
 MARGIN_X = 120
 CONTENT_W = 1680
 HEAD_H = 112                         # Kopfzeile mit Logo und Kapitel-Navigation, Haarlinie darunter
-LOGO_RATIO = 427.710156 / 71.207031  # Breite : Höhe der Wortmarke
-LOGO_BOX = (120, 40, 192, 32)        # Logo in der Kopfzeile
-COVER_LOGO_BOX = (120, 92, 336, 56)
+LOGO_RATIO = 335.97 / 63.40         # Breite : Höhe des Logos (FINAL1, mit Unterzeile)
+LOGO_BOX = (120, 38, 191, 36)        # Logo in der Kopfzeile
+COVER_LOGO_BOX = (120, 88, 339, 64)
 CONTENT_TOP = 340
 CONTENT_BOTTOM = 900
 SOURCE_Y = 920                       # Quelle oder Paragrafen-Chips über der Fußzeile

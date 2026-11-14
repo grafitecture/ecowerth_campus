@@ -80,14 +80,13 @@ function loginSeite(fehler) {
 <meta name="robots" content="noindex, nofollow">
 <title>ECOWERTH Campus · Anmeldung</title>
 <link rel="preload" href="/assets/fonts/archivo-600.woff2?v=1" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/public/login.css?v=3">
+<link rel="stylesheet" href="/assets/public/login.css?v=4">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <div id="gate">
   <header class="g-head"><div class="g-bar">
-    <img class="g-logo" src="/assets/public/logo-weiss.svg?v=1" alt="ECOWERTH" width="233" height="44">
-    <span class="g-campus">Campus</span>
+    <img class="g-logo" src="/assets/public/logo-campus-weiss.svg?v=1" alt="ECOWERTH Campus" width="501" height="44">
   </div></header>
   <main class="g-stage">
     <div class="g-core">
