@@ -30,13 +30,13 @@ Fehlen sie, misst sie nur ungefähr und meldet das.
 ```json
 {"presentation": {"title": "Zukunft im Kreislauf", "subtitle": "…", "kicker": "ECOWERTH · …",
                   "date": "Oktober 2026", "presenter": {"name": "…", "role": "…"},
-                  "chapters": ["Die Gruppe", "Unsere Marken", "Leistungen"]},
+                  "chapters": ["Die Gruppe", "Unsere Geschäftsbereiche", "Leistungen"]},
  "slides": [{"type": "cover"}, {"type": "agenda"}, {"type": "chapter", "chapter": 1}, …]}
 ```
 
 `presentation.title` ist Pflicht, `chapters` 2–6. Jede Folie kann zusätzlich `kicker`, `source`, `notes`
 (Sprechertext), `legal` (1–6 Paragrafen-Chips wie `"§ 59 KrWG"`) und `chapter` (1-basiert) tragen.
-`chapter` markiert das Kapitel in der Kopfzeile und setzt den Kicker „02 · Unsere Marken“.
+`chapter` markiert das Kapitel in der Kopfzeile und setzt den Kicker „02 · Unsere Geschäftsbereiche“.
 
 | type | Layout | Pflicht | optional |
 |---|---|---|---|
@@ -49,7 +49,7 @@ Fehlen sie, misst sie nur ungefähr und meldet das.
 | `points_chart` | 07 Punkte + Grafik | `title`, `points`, `chart` {bars 2–4 {label, value 0–100, display}} | `highlight` je Balken |
 | `statement` | 08 Aussage | `big` oder `statement` | – |
 | `facts` | 09 Kennzahlen | `title`, `facts` 2–4 {value, label} | `lead` |
-| `brands` | 10 Marken | `title`, `columns` 2–3 {brand: ecologicon/ecoreloop/ecoinvest/ecoacademy/ecoventures} | `label`, `from`, `text`, `items` 1–5 |
+| `brands` | 10 Geschäftsbereiche | `title`, `columns` 2–3 {brand: ecologicon/ecoreloop/ecoinvest/ecoacademy/ecoventures} | `label`, `from`, `text`, `items` 1–5 |
 | `checklist` | 11 Checkliste | `title`, `items` 1–8 | `focus` |
 | `steps` | 12 Schritte | `title`, `steps` 3–5 {title, text} oder 2–4 {title, photo} | `start`, `caption` |
 | `compare` | 13 Vergleich | `title`, `left`/`right` {label, items 1–4} | `style`: do_dont, myth_fact, neutral |
@@ -69,9 +69,10 @@ Fehlen sie, misst sie nur ungefähr und meldet das.
 ## Gestaltung
 
 - Farben nur aus `scripts/campus/tokens.py`: Dunkelblau #043751, Grün #6EA52E, Blau #117EC2, Rot #AC1920.
-  Marken: ECOLOGICON Blau, ECORELOOP Grün, ECOINVEST Rot – immer in dieser Reihenfolge.
-  Themengruppen: ECOACADEMY Violett #6D41A9, ECOVENTURES Orange #FF8200 (Text #A25500); auf einer eigenen
-  Folie nach den drei Marken, nicht in deren Spalten mischen.
+  Geschäftsbereiche: ECOLOGICON Blau, ECORELOOP Grün, ECOINVEST Rot – immer in dieser Reihenfolge.
+  ECOACADEMY (gehört zu ECOLOGICON) und ECOVENTURES (gehört zu ECOINVEST): Dunkelblau #043751 mit dezenter
+  Zusatzfarbe – Salbei #85B8A5 bzw. Sand #C1A681 für Linien und Flächen; auf einer eigenen Folie nach den drei
+  Geschäftsbereichen, nicht in deren Spalten mischen.
 - Logos: Stand LOGO_ECOWERTH_LOGO_FINAL1 (mit Unterzeile); Signet nie verändern.
 - Schriften: Archivo (Titel, Zahlen), IBM Plex Sans (Text), IBM Plex Mono (Kicker, Labels, Paragrafen).
 - Titel passen auf eine Zeile; lieber eine Folie mehr als volle Folien.

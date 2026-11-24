@@ -35,7 +35,7 @@ DECK_PLAN = SKILL / "examples" / "ecowerth-praesentation.json"
 DECK = OUT / "ecowerth-praesentation.pptx"
 GALLERY = SKILL / "assets" / "template" / "ecowerth-campus-template.pptx"
 FULL_W, THUMB_W = 1600, 400
-STAND = "14. November 2026"
+STAND = "24. November 2026"
 ASSET_VERSION = "1"  # Gleich dem ?v= der Schriften in site.css; erhöhen, wenn Browser alte Assets festhalten.
 
 
@@ -267,8 +267,8 @@ def write_index(out_dir: Path, deck: dict, slides: list[dict], layouts: list[dic
 
 
 TODO = '<span class="todo">PLATZHALTER — {}</span>'
-CONTACT = ('Telefon: <a href="tel:+4915110855833">+49 151 10 855 833</a><br>'
-           'E-Mail: <a href="mailto:florian.werthmann@ecowerth.de">florian.werthmann@ecowerth.de</a>')
+CONTACT = ('Telefon: <a href="tel:+499314523070">+49 931 4523070</a><br>'
+           'E-Mail: <a href="mailto:info@ecowerth.de">info@ecowerth.de</a> <span class="todo">zentrale Adresse bestätigen</span>')
 
 IMPRESSUM = f"""<p class="eyebrow">Rechtliches</p>
 <h1>Impressum</h1>

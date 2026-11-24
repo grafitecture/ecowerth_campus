@@ -141,7 +141,7 @@
           "items": ["Gewerbeimmobilien Kreislaufwirtschaft", "ECO Park Röthlein · 8.000 m²", "Genehmigungs- & Betreiberkonzepte", "Operative Recyclingkapazität"]
         }
       ],
-      "notes": "10 Marken (brands). Zwei oder drei Spalten; 'brand' setzt Wortmarke und Farbe der Untermarke."
+      "notes": "10 Geschäftsbereiche (brands). Zwei oder drei Spalten; 'brand' setzt Wortmarke und Farbe des Geschäftsbereichs."
     },
     {
       "type": "checklist",

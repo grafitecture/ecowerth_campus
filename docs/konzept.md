@@ -32,7 +32,7 @@ Keine Schatten, kein Leuchten, keine Verläufe außer im Bildbriefing-Platzhalte
 | Gruppe | Layouts |
 |---|---|
 | Rahmen | 01 Titel · 02 Agenda · 03 Kapitel · 23 Abschluss |
-| Inhalt | 05 Punkte · 06 Punkte + Foto · 07 Punkte + Grafik · 08 Aussage · 09 Kennzahlen · 10 Marken · 11 Checkliste · 12 Schritte · 13 Vergleich · 14 Tabelle · 15 Skala |
+| Inhalt | 05 Punkte · 06 Punkte + Foto · 07 Punkte + Grafik · 08 Aussage · 09 Kennzahlen · 10 Geschäftsbereiche · 11 Checkliste · 12 Schritte · 13 Vergleich · 14 Tabelle · 15 Skala |
 | Bild | 16 Foto · 17 Zwei Fotos · 18 Foto mit Markierungen |
 | Dialog | 04 Einstieg · 19 Praxisfall · 20 Zitat · 21 Wissenscheck · 22 Zusammenfassung |
 

@@ -5,7 +5,7 @@
     "kicker": "ECOWERTH · Unternehmenspräsentation",
     "presenter": {"name": "Florian Werthmann", "role": "Geschäftsführer, ecowerth GmbH"},
     "date": "Oktober 2026 · Reichenberg",
-    "chapters": ["Die Gruppe", "Unsere Marken", "Leistungen", "Rechtsrahmen", "Zusammenarbeit"]
+    "chapters": ["Die Gruppe", "Geschäftsbereiche", "Leistungen", "Rechtsrahmen", "Zusammenarbeit"]
   },
   "slides": [
     {
@@ -17,7 +17,7 @@
       "type": "agenda",
       "items": [
         {"title": "Die Gruppe", "text": "Vier Unternehmen. Ein Kreislauf."},
-        {"title": "Unsere Marken", "text": "Drei Marken, zwei Themengruppen."},
+        {"title": "Geschäftsbereiche", "text": "Drei Geschäftsbereiche, dazu ECOACADEMY und ECOVENTURES."},
         {"title": "Leistungen", "text": "Acht Leistungsfelder entlang der Pflichtenkette."},
         {"title": "Rechtsrahmen", "text": "Ihre Pflichten. Unsere Systematik."},
         {"title": "Zusammenarbeit", "text": "Ein Gespräch, in dem Ihre Pflichten sortiert werden."}
@@ -38,16 +38,16 @@
       "big": "4",
       "statement": "Unternehmen gehen in der ecowerth GmbH auf",
       "text": "Ecologicon GmbH · ECO ReLoop GmbH · Eco Park Röthlein GmbH · Maintal Recycling UG",
-      "notes": "Was bisher auf vier Firmierungen verteilt war, arbeitet künftig unter einem Dach – in drei klar geschnittenen Marken und mit unveränderten Ansprechpartnern."
+      "notes": "Was bisher auf vier Firmierungen verteilt war, arbeitet künftig unter einem Dach – in drei klar geschnittenen Geschäftsbereichen und mit unveränderten Ansprechpartnern."
     },
     {
       "type": "compare",
       "chapter": 1,
       "title": "Was sich ändert – und was nicht",
       "style": "neutral",
-      "left": {"label": "Was sich ändert", "items": ["Eine Firmierung: die ecowerth GmbH", "Drei klar geschnittene Marken", "Ein Vertragspartner für Beratung, Systembetrieb und Fläche"]},
-      "right": {"label": "Was bleibt", "items": ["Teams und Projektverantwortliche", "Laufende Mandate, Systemverträge und Mietverhältnisse", "Standorte Reichenberg, Röthlein und Singapur"]},
-      "notes": "Statt vier Verträgen mit vier Gesellschaften bündelt die ecowerth GmbH alles in einem Vertragsverhältnis – auf Wunsch weiterhin je Marke getrennt."
+      "left": {"label": "Was sich ändert", "items": ["Eine Firmierung: die ecowerth GmbH", "Drei klar geschnittene Geschäftsbereiche", "Ein Vertragspartner für Beratung, Systembetrieb und Fläche"]},
+      "right": {"label": "Was bleibt", "items": ["Teams und Projektverantwortliche", "Laufende Mandate, Systemverträge und Mietverhältnisse", "Standorte Reichenberg, Röthlein, Dresden und Singapur"]},
+      "notes": "Statt vier Verträgen mit vier Gesellschaften bündelt die ecowerth GmbH alles in einem Vertragsverhältnis – auf Wunsch weiterhin je Geschäftsbereich getrennt."
     },
     {
       "type": "quote",
@@ -66,16 +66,16 @@
       "lead": "Was bisher auf vier Firmierungen verteilt war, arbeitet künftig unter einem Dach.",
       "facts": [
         {"value": "4", "label": "Unternehmen unter einem Dach"},
-        {"value": "3", "label": "Marken: ECOLOGICON · ECORELOOP · ECOINVEST"},
+        {"value": "3", "label": "Bereiche: ECOLOGICON · ECORELOOP · ECOINVEST"},
         {"value": "12", "label": "abgedeckte Zielgruppen entlang der Pflichtenkette"},
         {"value": "8.000 m²", "label": "eigener Standort ECO Park Röthlein"}
       ]
     },
-    {"type": "chapter", "chapter": 2, "line": "Drei Marken und zwei Themengruppen unter einem Dach.", "photo": {"file": "photos/kapitel-textilien.jpg"}},
+    {"type": "chapter", "chapter": 2, "title": "Geschäfts- bereiche", "line": "Drei Geschäftsbereiche unter einem Dach.", "photo": {"file": "photos/kapitel-textilien.jpg"}},
     {
       "type": "brands",
       "chapter": 2,
-      "title": "Ein Dach, drei Marken",
+      "title": "Ein Dach, drei Geschäftsbereiche",
       "columns": [
         {
           "brand": "ecologicon",
@@ -99,7 +99,7 @@
           "items": ["Gewerbeimmobilien Kreislaufwirtschaft", "ECO Park Röthlein · 8.000 m²", "Genehmigungs- & Betreiberkonzepte", "Operative Recyclingkapazität"]
         }
       ],
-      "notes": "Nach außen tritt ECOWERTH als Gruppe auf, nach innen bleibt jede Marke ein eigener Betrieb mit eigenem Team und eigenen Verträgen. Kunden beauftragen eine einzelne Marke oder alle drei über einen Vertragspartner."
+      "notes": "Nach außen tritt ECOWERTH als Gruppe auf, nach innen bleibt jeder Geschäftsbereich ein eigener Betrieb mit eigenem Team und eigenen Verträgen. Kunden beauftragen einen einzelnen Geschäftsbereich oder alle drei über einen Vertragspartner."
     },
     {
       "type": "points_photo",
@@ -189,25 +189,25 @@
     {
       "type": "brands",
       "chapter": 2,
-      "kicker": "02 · Unsere Marken · Themengruppen",
-      "title": "Zwei Themengruppen unter dem Dach",
+      "kicker": "02 · Geschäftsbereiche · bei ECOLOGICON und ECOINVEST",
+      "title": "ECOACADEMY und ECOVENTURES",
       "columns": [
         {
           "brand": "ecoacademy",
-          "label": "Wissen & Weiterbildung",
+          "label": "ECOLOGICON · Wissen & Weiterbildung",
           "from": "fachlich getragen von ECOLOGICON",
           "text": "Schulungen, Trainingsprogramme und Wissenstransfer – aus laufenden und abgeschlossenen Mandaten und Projekten.",
           "items": ["Schulungen für Fachabteilungen", "Trainingsprogramme & Capacity Building", "Studienreisen und Workshops", "Fachbeiträge & Vorträge"]
         },
         {
           "brand": "ecoventures",
-          "label": "Green Start-ups & Beteiligungen",
-          "from": "hervorgegangen aus dem Bereich „Green Start-up“ der ECOLOGICON",
+          "label": "ECOINVEST · Green Start-ups & Beteiligungen",
+          "from": "bei ECOINVEST, hervorgegangen aus „Green Start-up“ der ECOLOGICON",
           "text": "Wir begleiten nachhaltige Ideen und junge Unternehmen von Anfang an – auch bereits in der Pre-Seed-Phase.",
           "items": ["Strukturierung", "Förderung", "Finanzierung", "Umsetzung"]
         }
       ],
-      "notes": "ECOACADEMY und ECOVENTURES sind Themengruppen, keine eigenen Gesellschaften: ECOACADEMY bündelt das Wissen aus den Mandaten, ECOVENTURES begleitet Green Start-ups. Beteiligungen laufen über die Muttergesellschaft ECO Holding GmbH."
+      "notes": "ECOACADEMY und ECOVENTURES sind keine eigenen Gesellschaften: ECOACADEMY gehört zu ECOLOGICON und bündelt das Wissen aus den Mandaten, ECOVENTURES gehört zu ECOINVEST und begleitet Green Start-ups. Beteiligungen laufen über die Muttergesellschaft ECO Holding GmbH."
     },
     {
       "type": "points_photo",
@@ -360,7 +360,7 @@
         {"title": "Ganzheitlich", "text": "Beratung, Systembetrieb und Fläche greifen ineinander."},
         {"title": "Rechtskonform", "text": "Pflichten nach Rolle zugeordnet, umgesetzt und dokumentiert."},
         {"title": "Nachhaltig", "text": "Aus gesetzlichen Auflagen wird ein Beitrag für die Zukunft."},
-        {"title": "Ein Vertragspartner", "text": "Alle drei Marken über die ecowerth GmbH."},
+        {"title": "Ein Vertragspartner", "text": "Alle drei Geschäftsbereiche über die ecowerth GmbH."},
         {"title": "Gleiche Ansprechpartner", "text": "Teams und Mandate bleiben, wie sie sind."}
       ]
     },
@@ -373,7 +373,7 @@
         {"title": "Pflichten sortieren", "text": "Wir ordnen zu, welche Regelwerke für Sie gelten."},
         {"title": "Umsetzung aus einer Hand", "text": "Beratung, Systembetrieb und Fläche mit einem Vertragspartner."}
       ],
-      "next": {"label": "Kontakt", "title": "Florian Werthmann", "text": "Geschäftsführer, ecowerth GmbH\n+49 151 10 855 833\nflorian.werthmann@ecowerth.de"},
+      "next": {"label": "Kontakt", "title": "Florian Werthmann", "text": "ecowerth GmbH\n+49 931 4523070\ninfo@ecowerth.de"},
       "notes": "Wir melden uns innerhalb eines Werktages."
     }
   ]

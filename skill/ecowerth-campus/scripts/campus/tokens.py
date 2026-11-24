@@ -58,16 +58,18 @@ COLOR = {
     "on_dark": "E8EEF4",
     "muted_dark": "A3B6C9",
     "green_light": "8FC65A",
-    # Themengruppen (wie auf der Website): ECOACADEMY Violett, ECOVENTURES PANTONE 151 C
-    "academy": "6D41A9",
-    "academy_ink": "6D41A9",
-    "academy_tint": "F3ECFF",
-    "ventures": "FF8200",
-    "ventures_ink": "A25500",
-    "ventures_tint": "FFEDD9",
+    # ECOACADEMY (bei ECOLOGICON) und ECOVENTURES (bei ECOINVEST) wie auf der Website seit 19.11.2026:
+    # Dunkelblau mit je einer dezenten Zusatzfarbe gleicher Helligkeit (Salbei bzw. Sand) für Linien und Flächen;
+    # Schrift in Dunkelblau (die Zusatzfarben sind für Text auf Weiß zu hell).
+    "academy": "85B8A5",
+    "academy_ink": "043751",
+    "academy_tint": "EDF1F5",
+    "ventures": "C1A681",
+    "ventures_ink": "043751",
+    "ventures_tint": "EDF1F5",
 }
 
-# Markenfarbe je Untermarke und Themengruppe: Fläche/Balken und textsichere Variante.
+# Farbe je Geschäftsbereich (und ECOACADEMY/ECOVENTURES): Fläche/Balken und textsichere Variante.
 # Logos: Stand LOGO_ECOWERTH_LOGO_FINAL1 (14.11.2026), aus den SVGs der Website gerendert.
 BRANDS = {
     "ecologicon": {"name": "ECOLOGICON", "color": "blue", "ink": "blue_ink", "logo": "brand/ecologicon.png"},

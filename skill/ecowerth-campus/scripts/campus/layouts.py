@@ -176,7 +176,7 @@ LAYOUTS: list[LayoutDef] = [
     _light("09 Kennzahlen", "facts",
            text_ph("Lead", (MARGIN_X, 330, 1400, 140), 20, "muted", "Einleitender Satz zu den Kennzahlen."),
            decor=[DecorDef("rect", "facts-band", (0, 540, 1920, 350), {"fill": COLOR["green"]})]),
-    _light("10 Marken", "brands"),
+    _light("10 Geschäftsbereiche", "brands"),
     _light("11 Checkliste", "checklist"),
     _light("12 Schritte", "steps"),
     _light("13 Vergleich", "compare"),
